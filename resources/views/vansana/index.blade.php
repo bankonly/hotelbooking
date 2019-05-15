@@ -14,6 +14,7 @@
     <div id="app">
             <app-navbar></app-navbar>
             <app-advertise></app-advertise>
+            <app-room-ads></app-room-ads>
     </div>
     
 <script src="js/app.js"></script>

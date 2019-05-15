@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +17,4 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+Route::get('/search','HomeController@search');

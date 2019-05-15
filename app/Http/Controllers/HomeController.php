@@ -25,4 +25,7 @@ class HomeController extends Controller
     {
         return view('vansana.index');
     }
+    public function search(Request $data){
+        return $data->all();
+    }
 }

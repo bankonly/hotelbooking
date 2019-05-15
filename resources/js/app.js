@@ -21,6 +21,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('app-room-ads', require('./components/roomads.vue').default);
 Vue.component('app-navbar', require('./components/navbar.vue').default);
 Vue.component('app-advertise', require('./components/advertise.vue').default);
 

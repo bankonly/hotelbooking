@@ -4,7 +4,13 @@
       <div class="center-advertise">
           <div class="seach-room">
               <div class="box-search">
+                <div class="textshow">
+                  <span class="lao-txt vansana">VANSANA HOTEL</span><br>
+                  <span class="lao-txt onlinebk">Online Booking, The move you stay, The more you see</span><br>
+                  <span class="lao-txt onlinebk choose">Chose yours below ></span>
+                  </div>
                   <div class="input-all">
+                    
                       <ul class="ul-boxseach">
                           <li class="li-center branch ml-3">
                             <select name="" id="" class="branches" @change="branchesadd">
@@ -52,6 +58,7 @@
           </div>
     </div>
     </div>
+    <div class="closemodal" v-if="modal_addnum == true" @click="modal_addnum = false"></div>
   </div>
 </template>
 <script>
@@ -129,8 +136,23 @@ export default {
       this.roomsvalue += 1
       this.data_seach.roomsvalue = this.roomsvalue
     },
-    searchroom(){
-      console.log(this.data_seach)
+    searchroom(search){
+      console.log(this.data_seach.adult)
+      search = 
+      'search?province='+this.data_seach.brance+
+      '&checkin='+this.data_seach.date_start+
+      '&checkout='+this.data_seach.date_end+
+      '&adult='+this.adultvalue+
+      '&children='+this.childrenvalue+
+      '&rooms='+this.roomsvalue
+      
+      console.log(search)
+      axios.get(search).then(res=>{
+          console.log(res.data)
+      }).catch(er=>{
+        console.log(er.res)
+      })
+      
     },
     branchesadd(data){
       data = $('.datasent').val()
@@ -181,6 +203,30 @@ export default {
 };
 </script>
 <style scoped>
+.choose{
+  color:#999;
+}
+.lao-txt{
+  color:#fff;
+}
+.vansana{
+  color:#fff;
+  font-size: 33px;
+}
+.onlinebk{
+  color:#fff;
+}
+.textshow{
+    position: relative;
+    left: 51px;
+}
+.closemodal{
+      position: absolute;
+    width: 100%;
+    top: 0;
+    height: 1000px;
+    z-index: 100;
+}
 .branches{
       height: 34px;
     width: 183px;
@@ -212,10 +258,13 @@ export default {
     line-height: 18px;
 }
 .input-value{
-  outline: none;
+ outline: none;
     height: 27px;
     width: 90px;
-    color: #7d7d7d;
+    padding-left: 14px;
+    color: #736f6f;
+    border: none;
+    background: none;
     text-align: center;
 }
 .btn-plus-ault{
@@ -234,6 +283,7 @@ export default {
     
     /* width: 100%; */
     height: 500px;
+    padding:22px;
 }
 .center-advertise{
       width: 1200px;
@@ -263,7 +313,7 @@ export default {
     border: 1px solid #5ea0f5;
     border-radius: 3px;
     margin: 0 auto;
-    top: 75px;
+    top: 31px;
 
 }
 .ul-boxseach {
@@ -312,7 +362,7 @@ width: 83px;
  sans-serif;
 }
 .text-go{
-      background: #ffbc15;
+          background: #338de6;
     height: 48px;
     color: #fff;
     font-size: 18px;
@@ -330,6 +380,7 @@ width: 83px;
     right: 108px;
     border-radius: 2px;
         text-align: center;
+        z-index: 101;
 }
 </style>
 
