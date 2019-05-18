@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
-Route::get('/search','HomeController@search');
+Route::get('/searchdata','HomeController@search');
+Route::get('/{any}', 'HomeController@index')->where('any', '.*');

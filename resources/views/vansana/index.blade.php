@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.8.2/css/all.css">
 </head>
 <body>
     <div id="app">
             <app-navbar></app-navbar>
-            <app-advertise></app-advertise>
-            <app-room-ads></app-room-ads>
+            <router-view></router-view>
+            <app-footer></app-footer>
     </div>
     
 <script src="js/app.js"></script>

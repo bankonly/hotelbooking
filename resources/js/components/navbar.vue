@@ -5,7 +5,7 @@
       <div class="menu-top-header">
         <div class="menu-header">
           <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand txt-color" href="#">Vansana Hotel</a>
+            <router-link class="navbar-brand txt-color" to="/">Vansana Hotel</router-link>
             <button
               class="navbar-toggler"
               type="button"
@@ -20,14 +20,14 @@
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link txt-color" href="#" style="color:#fff">
-                    EN
+                  <a class="nav-link txt-color ltx" href="#" style="color:#fff">
+                    LA
                     <i class="fa fa-caret-down"></i>
                   </a>
                 </li>
               </ul>
               <span class="navbar-text">
-                <a href class="txt-color" style="color:#fff">Login</a>
+                <a href class="txt-color ltx" style="color:#fff">ເຂົ້າສູ່ລະບົບ</a>
               </span>
             </div>
           </nav>
@@ -40,13 +40,13 @@
               
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active"><a class="nav-link txt-color-nav2" href="#">Home</a></li>
-                  <li class="nav-item active"><a class="nav-link txt-color-nav2" href="#">Room</a></li>
-                  <li class="nav-item active"><a class="nav-link txt-color-nav2" href="#">About</a></li>
-                  <li class="nav-item active"><a class="nav-link txt-color-nav2" href="#">Contact Us</a></li>
+                  <li class="nav-item active"><router-link class="nav-link txt-color-nav2 ltx" to="/">ໜ້າຫລັກ</router-link></li>
+                  <li class="nav-item active"><router-link class="nav-link txt-color-nav2 ltx" to="/rooms">ຫ້ອງ</router-link></li>
+                  <li class="nav-item active"><router-link class="nav-link txt-color-nav2 ltx" to="/about">ກ່ຽວກັບ</router-link></li>
+                  <li class="nav-item active"><router-link class="nav-link txt-color-nav2 ltx" to="/contact">ຕິດຕໍ່</router-link></li>
                 </ul>
                 <span class="navbar-text">
-                  <a href>Hotel Status : 2 Rooms Left</a>
+                  <a href class="ltx">ຫ້ອງຍັງເຫລືອ : 2 ຫ້ອງ</a>
                 </span>
               </div>
             </nav>
@@ -81,7 +81,7 @@ export default {
 .menu-top-header {
   width: 100%;
   height: 36px;
-  background:#2a4267;
+  background:#338de6;
 }
 .under-top-header {
   width: 100%;
