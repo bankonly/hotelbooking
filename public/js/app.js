@@ -2383,6 +2383,81 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2390,6 +2465,11 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     return {
+      register_modal: false,
+      work_or_not: 'yes',
+      value_title: "",
+      loader_md_register: null,
+      title_m: ['Mr.', 'Mrs.'],
       seemore: null,
       gotbranch: "",
       loadermodal: null,
@@ -2442,15 +2522,24 @@ __webpack_require__.r(__webpack_exports__);
     var vm = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this;
   },
   methods: {
-    seemorebtn: function seemorebtn() {
+    registerroom: function registerroom() {
       var _this2 = this;
 
-      $('.cover-modal-rooms').slideUp(1000);
+      this.loader_md_register = true;
+      this.register_modal = true;
+      Object(timers__WEBPACK_IMPORTED_MODULE_1__["setTimeout"])(function () {
+        _this2.loader_md_register = false;
+      }, 1000);
+    },
+    seemorebtn: function seemorebtn() {
+      var _this3 = this;
+
       this.seemore = true;
       this.loadermodal = true;
       Object(timers__WEBPACK_IMPORTED_MODULE_1__["setTimeout"])(function () {
-        _this2.loadermodal = false;
-      }, 2000);
+        $('.cover-modal-rooms').removeClass('cover-height');
+        _this3.loadermodal = false;
+      }, 1000);
     },
     goBack: function goBack() {
       window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/');
@@ -2468,13 +2557,13 @@ __webpack_require__.r(__webpack_exports__);
       this.data_seach.roomsvalue = this.roomsvalue;
     },
     searchroom: function searchroom(search) {
-      var _this3 = this;
+      var _this4 = this;
 
       this.searchclicked = true;
       this.loader = true;
       Object(timers__WEBPACK_IMPORTED_MODULE_1__["setTimeout"])(function () {
-        _this3.loader = false;
-      }, 2000);
+        _this4.loader = false;
+      }, 1000);
       var n = 0;
       console.log(this.data_seach.adult);
       search = 'search?province=' + this.gotbranch + '&checkin=' + this.data_seach.date_start + '&checkout=' + this.data_seach.date_end + '&adult=' + this.adultvalue + '&children=' + this.childrenvalue + '&rooms=' + this.roomsvalue; // if(
@@ -8104,7 +8193,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.read-more-img[data-v-0b0aedd2]{\n  position: relative;\n    top: 14px;\n}\n.a-read-more[data-v-0b0aedd2]{\n    display: block;\n    padding: 10px;\n    width: 109px;\n    border-radius: 3px;\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-0b0aedd2]{\n      margin-left: 6px;\n    /* margin-top: 0px; */\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-0b0aedd2]{\n          position: relative;\n    left: 22px;\n    display: block;\n    width: 250px;\n    /* background: red; */\n    color: #ececec;\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-0b0aedd2]{\n  padding-bottom: 10px;\n    display: block;\n    position: relative;\n    text-align: left;\n    width: 686px;\n}\n.img-rooms[data-v-0b0aedd2]{\nwidth: 250px;\n    height: 250px;\n}\n.cover-img-l[data-v-0b0aedd2]{\n    width: 300px;\n    float: left;\n}\n.cover-letter-r[data-v-0b0aedd2]{\n    width: 270px;\n    float: left;\n}\n.txt-img-l[data-v-0b0aedd2]{\n}\n.rooms-ads-r[data-v-0b0aedd2]{\n}\n.center-alert-error[data-v-0b0aedd2]{\n}\n.txt-alert-error[data-v-0b0aedd2]{\n      margin: 0 auto;\n    width: 503px;\n    line-height: 50px;\n    /* margin: 0 auto; */\n    color: #fff;\n    height: 50px;\n    border-radius: 3px;\n    display: block;\n    font-weight: bold;\n    background: #fd7272;\n}\n.alert-error[data-v-0b0aedd2]{\n    width: 100%;\n    height: 50px;\n    text-align: center;\n    position: fixed;\n    top: 40px;\n}\n.choose[data-v-0b0aedd2]{\n  color:#999;\n}\n.lao-txt[data-v-0b0aedd2]{\n  color:#fff;\n}\n.vansana[data-v-0b0aedd2]{\n  color:#fff;\n  font-size: 33px;\n}\n.onlinebk[data-v-0b0aedd2]{\n  color:#fff;\n}\n.textshow[data-v-0b0aedd2]{\n    position: relative;\n    left: 51px;\n}\n.closemodal[data-v-0b0aedd2]{\n      position: absolute;\n    width: 100%;\n    top: 0;\n    height: 1000px;\n    z-index: 100;\n}\n.branches[data-v-0b0aedd2]{\n      height: 34px;\n    width: 183px;\n    background: #fff;\n    border-color: #ccc;\n}\n.ul-modal[data-v-0b0aedd2]{\n    text-align: center;\n}\n.ul-modal li[data-v-0b0aedd2]{\n  margin-top: 16px;\n}\n.plus-adult[data-v-0b0aedd2]{\n}\n.text-explain[data-v-0b0aedd2]{\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-0b0aedd2]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    right: 29px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    color: #fff;\n    background: #0892da;\n    line-height: 18px;\n}\n.input-value[data-v-0b0aedd2]{\n outline: none;\n    height: 27px;\n    width: 90px;\n    padding-left: 14px;\n    color: #736f6f;\n    border: none;\n    background: none;\n    text-align: center;\n}\n.btn-plus-ault[data-v-0b0aedd2]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    left: 29px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    color: #fff;\n    background: #0892da;\n    line-height: 18px;\n}\n.advertise[data-v-0b0aedd2]{\n    \n    /* width: 100%; */\n    height: 500px;\n    padding:22px;\n}\n.center-advertise[data-v-0b0aedd2]{\n      width: 1200px;\n      background: url(\"/imgs/advertise.jpg\");\n    height: 500px;\n    margin: 0 auto;\n    /* background: black; */\n}\n.seach-room[data-v-0b0aedd2]{\n    width: 1000px;\n    height: 500px;\n    margin: 0 auto;\n    /* background: green; */\n}\n.box-search[data-v-0b0aedd2]{\n             width: 100%;\n    height: 200px;\n    position: relative;\n    top: 150px;\n}\n.input-all[data-v-0b0aedd2]{\n       width: 900px;\n    height: 50px;\n    background: #ffffff;\n    position: relative;\n    border: 1px solid #5ea0f5;\n    border-radius: 3px;\n    margin: 0 auto;\n    top: 31px;\n}\n.ul-boxseach[data-v-0b0aedd2] {\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-0b0aedd2]{\n        line-height: 50px;\n    float: left;\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-0b0aedd2]{\n     text-align: center;\n    line-height:50px;\n    float: left;\n    width: 108px;\n}\n.branch[data-v-0b0aedd2]{\n    text-align: left;\n    width: 199px;\n}\n.check-in[data-v-0b0aedd2]{\n    width: 150px;\n}\n.check-out[data-v-0b0aedd2]{\n    width: 150px;\n}\n.adult[data-v-0b0aedd2]{\nwidth: 83px;  \ncursor: pointer;\n}\n.chrildren[data-v-0b0aedd2]{\nwidth: 83px;  \ncursor: pointer;\n}\n.rooms[data-v-0b0aedd2]{\nwidth: 83px;\n}\n.mx-datepicker[data-v-0b0aedd2] {\n    position: relative;\n    display: inline-block;\n    width: 138px;\n    color: #73879c;\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\n sans-serif;\n}\n.text-go[data-v-0b0aedd2]{\n          background: #338de6;\n    height: 48px;\n    color: #fff;\n    font-size: 18px;\n    font-weight: bold;\n    cursor: pointer;\n}\n.modal-acr[data-v-0b0aedd2]{\n        width: 250px;\n    /* top: 3px; */\n    background: white;\n    position: absolute;\n    border: 1px solid #5da0f5;\n    height: 180px;\n    top: 53px;\n    right: 108px;\n    border-radius: 2px;\n        text-align: center;\n        z-index: 101;\n}\n.rooms[data-v-0b0aedd2]{\n        /* background: red; */\n    width: 100%;\n    height: 0 auto;\n    margin-top: 64px;\n}\n.center-rooms[data-v-0b0aedd2]{\n        width: 1200px;\n    height: 250px;\n    width: 1000;\n    margin: 0 auto;\n    position: relative;\n}\n.rooms-ads[data-v-0b0aedd2]{\n    width: 600px;\n    /* height: 250px; */\n    float: left;\n}\n", ""]);
+exports.push([module.i, "\n.read-more-img[data-v-0b0aedd2]{\r\n  position: relative;\r\n    top: 14px;\n}\n.a-read-more[data-v-0b0aedd2]{\r\n    display: block;\r\n    padding: 10px;\r\n    width: 109px;\r\n    border-radius: 3px;\r\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-0b0aedd2]{\r\n      margin-left: 6px;\r\n    /* margin-top: 0px; */\r\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-0b0aedd2]{\r\n          position: relative;\r\n    left: 22px;\r\n    display: block;\r\n    width: 250px;\r\n    /* background: red; */\r\n    color: #ececec;\r\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-0b0aedd2]{\r\n  padding-bottom: 10px;\r\n    display: block;\r\n    position: relative;\r\n    text-align: left;\r\n    width: 686px;\n}\n.img-rooms[data-v-0b0aedd2]{\r\nwidth: 250px;\r\n    height: 250px;\n}\n.cover-img-l[data-v-0b0aedd2]{\r\n    width: 300px;\r\n    float: left;\n}\n.cover-letter-r[data-v-0b0aedd2]{\r\n    width: 270px;\r\n    float: left;\n}\n.txt-img-l[data-v-0b0aedd2]{\n}\n.rooms-ads-r[data-v-0b0aedd2]{\n}\n.center-alert-error[data-v-0b0aedd2]{\n}\n.txt-alert-error[data-v-0b0aedd2]{\r\n      margin: 0 auto;\r\n    width: 503px;\r\n    line-height: 50px;\r\n    /* margin: 0 auto; */\r\n    color: #fff;\r\n    height: 50px;\r\n    border-radius: 3px;\r\n    display: block;\r\n    font-weight: bold;\r\n    background: #fd7272;\n}\n.alert-error[data-v-0b0aedd2]{\r\n    width: 100%;\r\n    height: 50px;\r\n    text-align: center;\r\n    position: fixed;\r\n    top: 40px;\n}\n.choose[data-v-0b0aedd2]{\r\n  color:#999;\n}\n.lao-txt[data-v-0b0aedd2]{\r\n  color:#fff;\n}\n.vansana[data-v-0b0aedd2]{\r\n  color:#fff;\r\n  font-size: 33px;\n}\n.onlinebk[data-v-0b0aedd2]{\r\n  color:#fff;\n}\n.textshow[data-v-0b0aedd2]{\r\n    position: relative;\r\n    left: 51px;\n}\n.closemodal[data-v-0b0aedd2]{\r\n      position: absolute;\r\n    width: 100%;\r\n    top: 0;\r\n    height: 1000px;\r\n    z-index: 100;\n}\n.branches[data-v-0b0aedd2]{\r\n      height: 34px;\r\n    width: 183px;\r\n    background: #fff;\r\n    border-color: #ccc;\n}\n.ul-modal[data-v-0b0aedd2]{\r\n    text-align: center;\n}\n.ul-modal li[data-v-0b0aedd2]{\r\n  margin-top: 16px;\n}\n.plus-adult[data-v-0b0aedd2]{\n}\n.text-explain[data-v-0b0aedd2]{\r\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-0b0aedd2]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    right: 29px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    color: #fff;\r\n    background: #0892da;\r\n    line-height: 18px;\n}\n.input-value[data-v-0b0aedd2]{\r\n outline: none;\r\n    height: 27px;\r\n    width: 90px;\r\n    padding-left: 14px;\r\n    color: #736f6f;\r\n    border: none;\r\n    background: none;\r\n    text-align: center;\n}\n.btn-plus-ault[data-v-0b0aedd2]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    left: 29px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    color: #fff;\r\n    background: #0892da;\r\n    line-height: 18px;\n}\n.advertise[data-v-0b0aedd2]{\r\n    \r\n    /* width: 100%; */\r\n    height: 500px;\r\n    padding:22px;\n}\n.center-advertise[data-v-0b0aedd2]{\r\n      width: 1200px;\r\n      background: url(\"/imgs/advertise.jpg\");\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    /* background: black; */\n}\n.seach-room[data-v-0b0aedd2]{\r\n    width: 1000px;\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    /* background: green; */\n}\n.box-search[data-v-0b0aedd2]{\r\n             width: 100%;\r\n    height: 200px;\r\n    position: relative;\r\n    top: 150px;\n}\n.input-all[data-v-0b0aedd2]{\r\n       width: 900px;\r\n    height: 50px;\r\n    background: #ffffff;\r\n    position: relative;\r\n    border: 1px solid #5ea0f5;\r\n    border-radius: 3px;\r\n    margin: 0 auto;\r\n    top: 31px;\n}\n.ul-boxseach[data-v-0b0aedd2] {\r\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-0b0aedd2]{\r\n        line-height: 50px;\r\n    float: left;\r\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-0b0aedd2]{\r\n     text-align: center;\r\n    line-height:50px;\r\n    float: left;\r\n    width: 108px;\n}\n.branch[data-v-0b0aedd2]{\r\n    text-align: left;\r\n    width: 199px;\n}\n.check-in[data-v-0b0aedd2]{\r\n    width: 150px;\n}\n.check-out[data-v-0b0aedd2]{\r\n    width: 150px;\n}\n.adult[data-v-0b0aedd2]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.chrildren[data-v-0b0aedd2]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.rooms[data-v-0b0aedd2]{\r\nwidth: 83px;\n}\n.mx-datepicker[data-v-0b0aedd2] {\r\n    position: relative;\r\n    display: inline-block;\r\n    width: 138px;\r\n    color: #73879c;\r\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\r\n sans-serif;\n}\n.text-go[data-v-0b0aedd2]{\r\n          background: #338de6;\r\n    height: 48px;\r\n    color: #fff;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    cursor: pointer;\n}\n.modal-acr[data-v-0b0aedd2]{\r\n        width: 250px;\r\n    /* top: 3px; */\r\n    background: white;\r\n    position: absolute;\r\n    border: 1px solid #5da0f5;\r\n    height: 180px;\r\n    top: 53px;\r\n    right: 108px;\r\n    border-radius: 2px;\r\n        text-align: center;\r\n        z-index: 101;\n}\n.rooms[data-v-0b0aedd2]{\r\n        /* background: red; */\r\n    width: 100%;\r\n    height: 0 auto;\r\n    margin-top: 64px;\n}\n.center-rooms[data-v-0b0aedd2]{\r\n        width: 1200px;\r\n    height: 250px;\r\n    width: 1000;\r\n    margin: 0 auto;\r\n    position: relative;\n}\n.rooms-ads[data-v-0b0aedd2]{\r\n    width: 600px;\r\n    /* height: 250px; */\r\n    float: left;\n}\r\n", ""]);
 
 // exports
 
@@ -8123,7 +8212,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.txt-descrip[data-v-13239228]{\n   width: 470px;\n    float: left;\n    height: 300px;\n    position: relative;\n    top: 20px;\n    text-align: left;\n    margin-left: 17px;\n}\n.txt-detail-der[data-v-13239228]{\n}\n.include-text[data-v-13239228]{\nwidth: 278px;\n    height: 350px;\n    float: right;\n}\n.ul-include-txt[data-v-13239228]{\n    width: 200px;\n    margin-top: 23px;\n    margin-left: 28px;\n}\n.ul-include-txt li[data-v-13239228]{\n   text-align: left;\n    padding: 7px;\n    margin-top: 7px;\n    border-radius: 10px;\n    border: 1px solid #44444414;\n}\n.img-detail-res-model[data-v-13239228]{\n    line-height: 500px;\n    width: 750px;\n    height: 475px;\n}\n.rsb-modal-desc[data-v-13239228]{\nmargin-top: 7px;\n    width: 780px;\n    height: 350px;\n    position: relative;\n    border-radius: 3px;\n    background: #fff;\n    float: right;\n    box-sizing: border-box;\n    box-shadow: 0px 0px 11px #343a4017;\n    border: 1px solid #c1c1c157;\n}\n.rsb-modal[data-v-13239228]{\nmargin-top: 7px;\n    width: 780px;\n    height: 500px;\n    position: relative;\n    border-radius: 3px;\n    background: #fff;\n    float: right;\n    box-sizing: border-box;\n    box-shadow: 0px 0px 11px #343a4017;\n    border: 1px solid #c1c1c157;\n}\n.crs-modal[data-v-13239228]{\n}\n.pc-modal[data-v-13239228]{\n    width: 778px;\n    height: 500px;\n    position: relative;\n    /* background: yellow; */\n    float: left;\n    line-height: 500px;\n}\n.pic-result-modal[data-v-13239228]{\n}\n.modal-result[data-v-13239228]{\n  padding-top: 49px;\n}\n.header-modal[data-v-13239228]{\n}\n.ul-header-modal[data-v-13239228]{\nwidth: 778px;\nfloat: right;\n}\n.ul-header-modal li[data-v-13239228]{\n  float: left;\n    line-height: 50px;\n    cursor: pointer;\n    width: 194px;\n    border: none;\n    background: #1e4250;\n    color: #fff;\n    border-right: 0.01em solid #ffffffed;\n}\n#search-loader-modal[data-v-13239228]{\n  position: absolute;\n    top: 400px;\n}\n.cover-modal-rooms[data-v-13239228]{\n  text-align: center;\nposition: absolute;\n    z-index: 100;\n    background: #ffffff;\n    width: 100%;\n    top: 0;\n    height: 0 auto;\n}\n.btn-clsoe-exit[data-v-13239228]{\n        border: 0;\n    top: 19px;\n    color: #f95555;\n    font-size: 34px;\n    position: fixed;\n    right: 47px;\n}\n.close-modal-rooms[data-v-13239228]{\n    position: absolute;\n    right: 0;\n}\n.lireview[data-v-13239228]{\n}\n.liprice-for-night[data-v-13239228]{\n    padding: 5px;\n        padding-top: 69px;\n    margin-right: 14px;\n}\n.liprice[data-v-13239228]{\n}\n.litax[data-v-13239228]{\n}\n.liinclude[data-v-13239228]{\n}\n.liallroom[data-v-13239228]{\n}\n.review[data-v-13239228]{\npadding: 5px;\n    color: #fff;\n    background: #1f4250;\n    border-radius: 3px;\n}\n.rv-score[data-v-13239228]{\n}\n.price-for-night[data-v-13239228]{\n    color: #4e4b4b;\n    font-size: 11px;\n    position: relative;\n    top: 11px;\n}\n.price[data-v-13239228]{\ncolor: #19d84f;\n    font-size: 21px;\n}\n.tax[data-v-13239228]{\ncolor: #6d6d6d;\n    font-size: 11px;\n}\n.include[data-v-13239228]{\n    color: #000;\n}\n.allroom[data-v-13239228]{\npadding: 7px 26px;\n    position: relative;\n    color: #fff;\n    top: 27px;\n    background: #338de6;\n}\n.btnton[data-v-13239228]{\n  display: block;\n    width: 93px;\n    padding: 10px;\n    border-radius: 3px;\n    color: #fff;\n    background: #1ad850;\n}\n.name-hotel[data-v-13239228]{\n    color: #191919c2;\n    font-size: 17px;\n    text-decoration: none;\n}\n.seeonmap[data-v-13239228]{\n}\n.pomotion[data-v-13239228]{\nfont-size: 11px;\n    background: #ffd900;\n    color: #fff;\n    display: block;\n    padding: 11px;\n}\n.roomdt[data-v-13239228]{\n    margin-top: 12px;\n    display: block;\n    padding-top: 27px;\n    font-size: 12px;\n    color: #000;\n}\n.txt-result-out[data-v-13239228]{\n      font-size: 25px;\n    display: block;\n    color: #353535;\n    height: 64px;\n    line-height: 64px;\n}\n.search-txt-search[data-v-13239228]{\n}\n.text-detail-room[data-v-13239228]{\n    position: relative;\n    top: 4px;\n}\n.text-detail-room li[data-v-13239228] {\nwidth: 260px;\n    text-align: left;\n    /* padding-top: 2px; */\n    margin-top: 6px;\n}\n.text-detail-room li a[data-v-13239228]{\n}\n.text-detail-room-right[data-v-13239228]{\n        text-align: right;\n    position: relative;\n    top: 17px;\n}\n.text-detail-room-right li[data-v-13239228] {\n    /* padding: 5px; */\n    margin-right: 14px;\n}\n.text-detail-room-right li a[data-v-13239228]{\n}\n.left-result-search[data-v-13239228]{\n    text-align: center;\n    position: relative;\n    width: 170px;\n    margin: 0 auto;\n    top: 13px;\n}\n.left-result-search li[data-v-13239228]{\n      padding: 3px;\n    margin-top: 6px;\n    width: 170px;\n    border-radius: 3px;\n    padding-left: 14px;\n    text-align: left;\n    background: #ffffff;\n    border: 1px solid #a8e2ff;\n}\n.img-detail-res[data-v-13239228]{\n    width: 220px;\n    height: 220px;\n    border-radius: 3px;\n    position: relative;\n    box-shadow: 0px 0px 11px #343a4017;\n    top: -29px;\n}\n.cover-search-box[data-v-13239228]{\n      width: 100%;\n    text-align: center;\n    height: 400px;\n    /* background: red; */\n}\n.center-searchbox[data-v-13239228]{\n    width: 1000px;\n    height: 400px;\n    /* top: -25px; */\n    position: relative;\n    /* background: blue; */\n    margin: 0 auto;\n}\n.left-search-box[data-v-13239228]{\n       float: left;\n    width: 207px;\n    text-align: center;\n    height: 300px;\n    border-radius: 3px;\n    /* border: 1px solid #338de6; */\n    position: relative;\n    /* background: #f8fafc; */\n}\n.right-search-box[data-v-13239228]{\n      margin-top: 7px;\n\n    width: 780px;\n    height: 300px;\n    position: relative;\n    border-radius: 3px;\n    background: #fff;\n    float: right;\n    box-sizing: border-box;\n    box-shadow: 0px 0px 11px #343a4017;\n    border: 1px solid #c1c1c157;\n}\n.cover-result-search[data-v-13239228]{\n    width: 100%;\n    height: 300px;\n    /* background: rebeccapurple; */\n}\n.pic-result[data-v-13239228]{\n   width: 250px;\n    height: 250px;\n    position: relative;\n    /* background: yellow; */\n    float: left;\n    line-height: 300px;\n}\n.detail-result[data-v-13239228]{\n    width: 520px;\n    height: 300px;\n    position: relative;\n    /* background: #71ab99; */\n    float: right;\n}\n.left-detail-txt[data-v-13239228]{\n    width: 260px;\n    height: 300px;\n    float: left;\n    position: relative;\n    /* background: #5d4646; */\n}\n.right-detail-txt[data-v-13239228]{\n    width: 260px;\n    height: 300px;\n    float: right;\n    position: relative;\n    /* background: #6d3a3a; */\n}\n.txt-left[data-v-13239228]{\n      position: absolute;\n    left: 24px;\n}\n.read-more-img[data-v-13239228]{\n  position: relative;\n    top: 14px;\n}\n.a-read-more[data-v-13239228]{\n    display: block;\n    padding: 10px;\n    width: 122px;\n    border-radius: 3px;\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-13239228]{\n      margin-left: 6px;\n    /* margin-top: 0px; */\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-13239228]{\n          position: relative;\n    left: 22px;\n    display: block;\n    width: 212px;\n    /* background: red; */\n    color: #ececec;\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-13239228]{\n  padding-bottom: 10px;\n    display: block;\n    position: relative;\n    text-align: left;\n    width: 686px;\n}\n.img-rooms[data-v-13239228]{\nwidth: 250px;\n    height: 250px;\n}\n.cover-img-l[data-v-13239228]{\n    width: 300px;\n    float: left;\n}\n.cover-letter-r[data-v-13239228]{\n    width: 270px;\n    float: left;\n}\n.txt-img-l[data-v-13239228]{\n}\n.rooms-ads-r[data-v-13239228]{\n}\n.center-alert-error[data-v-13239228]{\n}\n.txt-alert-error[data-v-13239228]{\n      margin: 0 auto;\n    width: 503px;\n    line-height: 50px;\n    /* margin: 0 auto; */\n    color: #fff;\n    height: 50px;\n    border-radius: 3px;\n    display: block;\n    font-weight: bold;\n    background: #fd7272;\n}\n.alert-error[data-v-13239228]{\n    width: 100%;\n    height: 50px;\n    text-align: center;\n    position: fixed;\n    top: 40px;\n}\n.choose[data-v-13239228]{\n  color:#999;\n}\n.lao-txt[data-v-13239228]{\n  color:#fff;\n}\n.vansana[data-v-13239228]{\n  color:#292929;\n  font-size: 33px;\n}\n.onlinebk[data-v-13239228]{\n  color:#868484;\n}\n.textshow[data-v-13239228]{\n    position: relative;\n    left: 51px;\n}\n.closemodal[data-v-13239228]{\n      position: absolute;\n    width: 100%;\n    top: 0;\n    height: 1000px;\n    z-index: 100;\n}\n.branches[data-v-13239228]{\n      height: 34px;\n    width: 183px;\n    background: #fff;\n    border-color: #ccc;\n}\n.ul-modal[data-v-13239228]{\n    text-align: center;\n}\n.ul-modal li[data-v-13239228]{\n  margin-top: 16px;\n}\n.plus-adult[data-v-13239228]{\n}\n.text-explain[data-v-13239228]{\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-13239228]{\n        width: 30px;\n    height: 26px;\n    position: relative;\n    right: -70px;\n    border: none;\n    border: 1px solid #0892da;\n    outline: none;\n    cursor: pointer;\n    border-radius: 2px;\n    color: #0892da;\n    /* background: #58575a; */\n    line-height: 18px;\n}\n.input-value[data-v-13239228]{\n     outline: none;\n    height: 27px;\n    width: 90px;\n    /* z-index: 100000; */\n    position: relative;\n    /* padding-left: 67px; */\n    left: 20px;\n    color: #736f6f;\n    border: none;\n    background: none;\n    text-align: right;\n}\n.btn-plus-ault[data-v-13239228]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    left: 29px;\n    border: none;\n    outline: none;\n     border: 1px solid #0892da;\n    cursor: pointer;\n    color: #0892da;\n    /* background: #0892da; */\n    line-height: 18px;\n}\n.advertise[data-v-13239228]{\n    \n    /* width: 100%; */\n    height: 300px;\n    padding:22px;\n}\n.center-advertise[data-v-13239228]{\n      width: 1200px;\n      /* background: url(\"/imgs/advertise.jpg\"); */\n    height: 300px;\n    margin: 0 auto;\n    /* background: black; */\n}\n.seach-room[data-v-13239228]{\n    width: 1000px;\n    height: 300px;\n    margin: 0 auto;\n    /* background: green; */\n}\n.box-search[data-v-13239228]{\n             width: 100%;\n    height: 200px;\n    position: relative;\n    top: 50px;\n}\n.input-all[data-v-13239228]{\n       width: 900px;\n    height: 50px;\n    background: #ffffff;\n    position: relative;\n    border: 1px solid #5ea0f5;\n    border-radius: 3px;\n    margin: 0 auto;\n    top: 31px;\n}\n.ul-boxseach[data-v-13239228] {\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-13239228]{\n        line-height: 50px;\n    float: left;\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-13239228]{\n     text-align: center;\n    line-height:50px;\n    float: left;\n    width: 108px;\n}\n.branch[data-v-13239228]{\n    text-align: left;\n    width: 199px;\n}\n.check-in[data-v-13239228]{\n    width: 150px;\n}\n.check-out[data-v-13239228]{\n    width: 150px;\n}\n.adult[data-v-13239228]{\nwidth: 83px;  \ncursor: pointer;\n}\n.chrildren[data-v-13239228]{\nwidth: 83px;  \ncursor: pointer;\n}\n.rooms[data-v-13239228]{\nwidth: 83px;\n}\n.mx-datepicker[data-v-13239228] {\n    position: relative;\n    display: inline-block;\n    width: 138px;\n    color: #73879c;\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\n sans-serif;\n}\n.text-go[data-v-13239228]{\n          background: #338de6;\n    height: 48px;\n    color: #fff;\n    font-size: 18px;\n    font-weight: bold;\n    cursor: pointer;\n}\n.modal-acr[data-v-13239228]{\n        width: 250px;\n    /* top: 3px; */\n    background: white;\n    position: absolute;\n    border: 1px solid #ececec;\n    height: 180px;\n    top: 53px;\n    right: 108px;\n    border-radius: 2px;\n        text-align: center;\n        z-index: 101;\n}\n.rooms[data-v-13239228]{\n        /* background: red; */\n    width: 100%;\n    height: 0 auto;\n    margin-top: 64px;\n}\n.center-rooms[data-v-13239228]{\n        width: 1200px;\n    height: 250px;\n    width: 1000;\n    margin: 0 auto;\n    position: relative;\n}\n.rooms-ads[data-v-13239228]{\n    width: 600px;\n    /* height: 250px; */\n    float: left;\n}\n", ""]);
+exports.push([module.i, "\n.cv_loader[data-v-13239228]{\r\n      position: relative;\r\n    width: 778px;\r\n    float: right;\r\n    top: 7px;\n}\n#search-loader-register[data-v-13239228]{\n}\n.bottom_input[data-v-13239228]{\r\n    text-align: left;\r\n    padding-top: 44px;\n}\n.pc-modal-register[data-v-13239228]{\r\n      width: 750px;\r\n    /* background: #666; */\r\n    margin: 0 auto;\r\n    margin-top: 14px;\n}\n.top_check_b[data-v-13239228]{\r\n    text-align: left;\n}\n.lb_why_you_guest[data-v-13239228]{\n}\n.why_you_guest[data-v-13239228]{\r\nmargin-left: 11px;\n}\n.lb_title_guest[data-v-13239228]{\n}\n.back_to_page[data-v-13239228]{\n}\n.title_guest[data-v-13239228]{\r\n    border: 1px solid #d6d6d6;\r\n    border-radius: 5px;\r\n    margin-left: 15px;\n}\n.lb_name_guest[data-v-13239228]{\r\n    padding-left: 20px;\n}\n.name_guest[data-v-13239228]{\r\n    border: 1px solid #d6d6d6;\r\n    border-radius: 5px;\r\n        margin-left: 7px;\n}\n.lb_lastname_guest[data-v-13239228]{\r\n  margin-left: 7px;\n}\n.lastname_guest[data-v-13239228]{\r\n    border: 1px solid #d6d6d6;\r\n    border-radius: 5px;\n}\n.email_guest[data-v-13239228]{\r\n    border: 1px solid #d6d6d6;\r\n    border-radius: 5px;\n}\n.cf_email_guest[data-v-13239228]{\r\n    border: 1px solid #d6d6d6;\r\n    border-radius: 5px;\n}\n.lb_email_guest[data-v-13239228]{\r\npadding-left: 20px;\n}\n.lb_cf_email_guest[data-v-13239228]{\n}\n.rsb-modal-register[data-v-13239228]{\r\nmargin-top: 7px;\r\n    width: 780px;\r\n    height: 365px;\r\n    position: relative;\r\n    border-radius: 3px;\r\n    background: #fff;\r\n    float: right;\r\n    box-sizing: border-box;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    border: 1px solid #c1c1c157;\n}\n.btn-confirm-der[data-v-13239228]{\r\n    border: none;\r\n    background: #1ad850;\r\n    color: #fff;\r\n    border-radius: 3px;\r\n    padding: 5px;\n}\n.tb_Room[data-v-13239228]{\r\n    width: 200px;\n}\n.tb_Sleep[data-v-13239228]{\r\nwidth: 100px;\n}\n.tb_Price[data-v-13239228]{\r\n    width: 200px;\n}\n.tb_choice[data-v-13239228]{\r\n    width: 170px;\n}\n.tb_empty_sleect[data-v-13239228]{\r\ntext-align: right;\n}\n.td_tb_Room[data-v-13239228]{\r\ntext-align: left;\r\n    padding-top: 15px;\n}\n.td_tb_Sleep[data-v-13239228]{\n}\n.td_tb_Price[data-v-13239228]{\n}\n.td_tb_choice[data-v-13239228]{\r\ntext-align: left;\n}\n.td_tb_empty_sleect[data-v-13239228]{\n}\n.tb_room_detail[data-v-13239228]{\r\n    width: 750px;\r\n    margin: 0 auto;\r\n        margin-top: 12px;\n}\n.thead_room_detail[data-v-13239228]{\n}\n.thead_room_detail th[data-v-13239228]{\r\n      padding: 9px;\r\n    background: #338de6;\r\n    color: #fff;\n}\n.tbody_room_detail[data-v-13239228]{\n}\n.tbody_room_detail tr[data-v-13239228]{\n}\n.tbody_room_detail tr td[data-v-13239228]{\n}\n.btn-clsoe-back[data-v-13239228]{\r\n      background: none;\r\n    border: 1px solid #eaeaea;\r\n    /* border: none; */\r\n    border-radius: 3px;\r\n    /* left: 19px; */\r\n    margin-top: 9px;\r\n    color: #338de6;\r\n    height: 26px;\r\n    width: 72px;\r\n    /* padding: 3px; */\r\n    margin-left: 10px;\n}\n.txt-descrip[data-v-13239228]{\r\n   width: 470px;\r\n    float: left;\r\n    height: 300px;\r\n    position: relative;\r\n    top: 20px;\r\n    text-align: left;\r\n    margin-left: 17px;\n}\n.txt-detail-der[data-v-13239228]{\n}\n.include-text[data-v-13239228]{\r\nwidth: 278px;\r\n    height: 350px;\r\n    float: right;\n}\n.ul-include-txt[data-v-13239228]{\r\n    width: 200px;\r\n    margin-top: 23px;\r\n    margin-left: 28px;\n}\n.ul-include-txt li[data-v-13239228]{\r\n   text-align: left;\r\n    padding: 7px;\r\n    margin-top: 7px;\r\n    border-radius: 10px;\r\n    border: 1px solid #44444414;\n}\n.img-detail-res-model[data-v-13239228]{\r\n    line-height: 500px;\r\n    width: 750px;\r\n    height: 475px;\n}\n.rsb-modal-desc[data-v-13239228]{\r\nmargin-top: 7px;\r\n    width: 780px;\r\n    height: 350px;\r\n    position: relative;\r\n    border-radius: 3px;\r\n    background: #fff;\r\n    float: right;\r\n    box-sizing: border-box;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    border: 1px solid #c1c1c157;\n}\n.rsb-modal[data-v-13239228]{\r\nmargin-top: 7px;\r\n    width: 780px;\r\n    height: 365px;\r\n    position: relative;\r\n    border-radius: 3px;\r\n    background: #fff;\r\n    float: right;\r\n    box-sizing: border-box;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    border: 1px solid #c1c1c157;\n}\n.crs-modal[data-v-13239228]{\n}\n.pc-modal[data-v-13239228]{\r\n    width: 778px;\r\n    height: 500px;\r\n    position: relative;\r\n    /* background: yellow; */\r\n    float: left;\r\n    line-height: 500px;\n}\n.pic-result-modal[data-v-13239228]{\n}\n.modal-result[data-v-13239228]{\r\n  padding-top: 49px;\n}\n.header-modal[data-v-13239228]{\n}\n.ul-header-modal[data-v-13239228]{\r\n    width: 778px;\r\n    float: right;\r\n    background: #fff;\r\n    border: 1px solid #eaeaea;\n}\n.ul-header-modal li[data-v-13239228]{\r\n      float: left;\r\n    line-height: 50px;\r\n    cursor: pointer;\r\n    width: 194px;\r\n    border: none;\r\n    background: #ffffff;\r\n    color: #000;\r\n    border-right: 0.01em solid #f1f1f1;\n}\n#search-loader-modal[data-v-13239228]{\r\n  position: absolute;\r\n    top: 400px;\n}\n.cover-height[data-v-13239228]{\r\n  height: 1440px;\n}\n.cover-modal-rooms[data-v-13239228]{\r\n  text-align: center;\r\n  padding-bottom: 175px;\r\nposition: absolute;\r\n    z-index: 100;\r\n    \r\n    background: #ffffff;\r\n    width: 100%;\r\n    top: 0;\r\n    height: 0 auto;\n}\n.btn-clsoe-exit[data-v-13239228]{\r\n          border: 0;\r\n    top: -2px;\r\n    color: #f95555;\r\n    font-size: 34px;\r\n    position: fixed;\r\n    right: 9px;\r\n    background: none;\n}\n.close-modal-rooms[data-v-13239228]{\r\n    position: fixed;\r\n    left: 0;\n}\n.lireview[data-v-13239228]{\n}\n.liprice-for-night[data-v-13239228]{\r\n    padding: 5px;\r\n        padding-top: 69px;\r\n    margin-right: 14px;\n}\n.liprice[data-v-13239228]{\n}\n.litax[data-v-13239228]{\n}\n.liinclude[data-v-13239228]{\n}\n.liallroom[data-v-13239228]{\n}\n.review[data-v-13239228]{\r\npadding: 5px;\r\n    color: #fff;\r\n    background: #1f4250;\r\n    border-radius: 3px;\n}\n.rv-score[data-v-13239228]{\n}\n.price-for-night[data-v-13239228]{\r\n    color: #4e4b4b;\r\n    font-size: 11px;\r\n    position: relative;\r\n    top: 11px;\n}\n.price[data-v-13239228]{\r\ncolor: #19d84f;\r\n    font-size: 21px;\n}\n.tax[data-v-13239228]{\r\ncolor: #6d6d6d;\r\n    font-size: 11px;\n}\n.include[data-v-13239228]{\r\n    color: #000;\n}\n.allroom[data-v-13239228]{\r\npadding: 7px 26px;\r\n    position: relative;\r\n    color: #fff;\r\n    top: 27px;\r\n    background: #338de6;\n}\n.btnton[data-v-13239228]{\r\n  display: block;\r\n    width: 93px;\r\n    padding: 10px;\r\n    border-radius: 3px;\r\n    color: #fff;\r\n    background: #1ad850;\n}\n.name-hotel[data-v-13239228]{\r\n    color: #191919c2;\r\n    font-size: 17px;\r\n    text-decoration: none;\n}\n.seeonmap[data-v-13239228]{\n}\n.pomotion[data-v-13239228]{\r\nfont-size: 11px;\r\n    background: #ffd900;\r\n    color: #fff;\r\n    display: block;\r\n    padding: 11px;\n}\n.roomdt[data-v-13239228]{\r\n    margin-top: 12px;\r\n    display: block;\r\n    padding-top: 27px;\r\n    font-size: 12px;\r\n    color: #000;\n}\n.txt-result-out[data-v-13239228]{\r\n      font-size: 25px;\r\n    display: block;\r\n    color: #353535;\r\n    height: 64px;\r\n    line-height: 64px;\n}\n.search-txt-search[data-v-13239228]{\n}\n.text-detail-room[data-v-13239228]{\r\n    position: relative;\r\n    top: 4px;\n}\n.text-detail-room li[data-v-13239228] {\r\nwidth: 260px;\r\n    text-align: left;\r\n    /* padding-top: 2px; */\r\n    margin-top: 6px;\n}\n.text-detail-room li a[data-v-13239228]{\n}\n.text-detail-room-right[data-v-13239228]{\r\n        text-align: right;\r\n    position: relative;\r\n    top: 17px;\n}\n.text-detail-room-right li[data-v-13239228] {\r\n    /* padding: 5px; */\r\n    margin-right: 14px;\n}\n.text-detail-room-right li a[data-v-13239228]{\n}\n.left-result-search[data-v-13239228]{\r\n    text-align: center;\r\n    position: relative;\r\n    width: 170px;\r\n    margin: 0 auto;\r\n    top: 13px;\n}\n.left-result-search li[data-v-13239228]{\r\n      padding: 3px;\r\n    margin-top: 6px;\r\n    width: 170px;\r\n    border-radius: 3px;\r\n    padding-left: 14px;\r\n    text-align: left;\r\n    background: #ffffff;\r\n    border: 1px solid #a8e2ff;\n}\n.img-detail-res[data-v-13239228]{\r\n    width: 220px;\r\n    height: 220px;\r\n    border-radius: 3px;\r\n    position: relative;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    top: -29px;\n}\n.cover-search-box[data-v-13239228]{\r\n      width: 100%;\r\n    text-align: center;\r\n    height: 400px;\r\n    /* background: red; */\n}\n.center-searchbox[data-v-13239228]{\r\n    width: 1000px;\r\n    height: 400px;\r\n    /* top: -25px; */\r\n    position: relative;\r\n    /* background: blue; */\r\n    margin: 0 auto;\n}\n.left-search-box[data-v-13239228]{\r\n       float: left;\r\n    width: 207px;\r\n    text-align: center;\r\n    height: 300px;\r\n    border-radius: 3px;\r\n    border: 1px solid #eaeaea;\r\n    position: relative;\r\n    background: #ffffff;\n}\n.right-search-box[data-v-13239228]{\r\n      /* margin-top: 7px; */\r\n\r\n    width: 780px;\r\n    height: 300px;\r\n    position: relative;\r\n    border-radius: 3px;\r\n    background: #fff;\r\n    float: right;\r\n    box-sizing: border-box;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    border: 1px solid #c1c1c157;\n}\n.cover-result-search[data-v-13239228]{\r\n    width: 100%;\r\n    height: 300px;\r\n    /* background: rebeccapurple; */\n}\n.pic-result[data-v-13239228]{\r\n   width: 250px;\r\n    height: 250px;\r\n    position: relative;\r\n    /* background: yellow; */\r\n    float: left;\r\n    line-height: 300px;\n}\n.detail-result[data-v-13239228]{\r\n    width: 520px;\r\n    height: 300px;\r\n    position: relative;\r\n    /* background: #71ab99; */\r\n    float: right;\n}\n.left-detail-txt[data-v-13239228]{\r\n    width: 260px;\r\n    height: 300px;\r\n    float: left;\r\n    position: relative;\r\n    /* background: #5d4646; */\n}\n.right-detail-txt[data-v-13239228]{\r\n    width: 260px;\r\n    height: 300px;\r\n    float: right;\r\n    position: relative;\r\n    /* background: #6d3a3a; */\n}\n.txt-left[data-v-13239228]{\r\n      position: absolute;\r\n    left: 24px;\n}\n.read-more-img[data-v-13239228]{\r\n  position: relative;\r\n    top: 14px;\n}\n.a-read-more[data-v-13239228]{\r\n    display: block;\r\n    padding: 10px;\r\n    width: 122px;\r\n    border-radius: 3px;\r\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-13239228]{\r\n      margin-left: 6px;\r\n    /* margin-top: 0px; */\r\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-13239228]{\r\n          position: relative;\r\n    left: 22px;\r\n    display: block;\r\n    width: 212px;\r\n    /* background: red; */\r\n    color: #ececec;\r\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-13239228]{\r\n  padding-bottom: 10px;\r\n    display: block;\r\n    position: relative;\r\n    text-align: left;\r\n    width: 686px;\n}\n.img-rooms[data-v-13239228]{\r\nwidth: 250px;\r\n    height: 250px;\n}\n.cover-img-l[data-v-13239228]{\r\n    width: 300px;\r\n    float: left;\n}\n.cover-letter-r[data-v-13239228]{\r\n    width: 270px;\r\n    float: left;\n}\n.txt-img-l[data-v-13239228]{\n}\n.rooms-ads-r[data-v-13239228]{\n}\n.center-alert-error[data-v-13239228]{\n}\n.txt-alert-error[data-v-13239228]{\r\n      margin: 0 auto;\r\n    width: 503px;\r\n    line-height: 50px;\r\n    /* margin: 0 auto; */\r\n    color: #fff;\r\n    height: 50px;\r\n    border-radius: 3px;\r\n    display: block;\r\n    font-weight: bold;\r\n    background: #fd7272;\n}\n.alert-error[data-v-13239228]{\r\n    width: 100%;\r\n    height: 50px;\r\n    text-align: center;\r\n    position: fixed;\r\n    top: 40px;\n}\n.choose[data-v-13239228]{\r\n  color:#999;\n}\n.lao-txt[data-v-13239228]{\r\n  color:#fff;\n}\n.vansana[data-v-13239228]{\r\n  color:#292929;\r\n  font-size: 33px;\n}\n.onlinebk[data-v-13239228]{\r\n  color:#868484;\n}\n.textshow[data-v-13239228]{\r\n    position: relative;\r\n    left: 51px;\n}\n.closemodal[data-v-13239228]{\r\n      position: absolute;\r\n    width: 100%;\r\n    top: 0;\r\n    height: 1000px;\r\n    z-index: 100;\n}\n.branches[data-v-13239228]{\r\n      height: 34px;\r\n    width: 183px;\r\n    background: #fff;\r\n    border-color: #ccc;\n}\n.ul-modal[data-v-13239228]{\r\n    text-align: center;\n}\n.ul-modal li[data-v-13239228]{\r\n  margin-top: 16px;\n}\n.plus-adult[data-v-13239228]{\n}\n.text-explain[data-v-13239228]{\r\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-13239228]{\r\n        width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    right: -70px;\r\n    border: none;\r\n    border: 1px solid #0892da;\r\n    outline: none;\r\n    cursor: pointer;\r\n    border-radius: 2px;\r\n    color: #0892da;\r\n    /* background: #58575a; */\r\n    line-height: 18px;\n}\n.input-value[data-v-13239228]{\r\n     outline: none;\r\n    height: 27px;\r\n    width: 90px;\r\n    /* z-index: 100000; */\r\n    position: relative;\r\n    /* padding-left: 67px; */\r\n    left: 20px;\r\n    color: #736f6f;\r\n    border: none;\r\n    background: none;\r\n    text-align: right;\n}\n.btn-plus-ault[data-v-13239228]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    left: 29px;\r\n    border: none;\r\n    outline: none;\r\n     border: 1px solid #0892da;\r\n    cursor: pointer;\r\n    color: #0892da;\r\n    /* background: #0892da; */\r\n    line-height: 18px;\n}\n.advertise[data-v-13239228]{\r\n    \r\n    /* width: 100%; */\r\n    height: 300px;\r\n    padding:22px;\n}\n.center-advertise[data-v-13239228]{\r\n      width: 1200px;\r\n      /* background: url(\"/imgs/advertise.jpg\"); */\r\n    height: 300px;\r\n    margin: 0 auto;\r\n    /* background: black; */\n}\n.seach-room[data-v-13239228]{\r\n    width: 1000px;\r\n    height: 300px;\r\n    margin: 0 auto;\r\n    /* background: green; */\n}\n.box-search[data-v-13239228]{\r\n             width: 100%;\r\n    height: 200px;\r\n    position: relative;\r\n    top: 50px;\n}\n.input-all[data-v-13239228]{\r\n       width: 900px;\r\n    height: 50px;\r\n    background: #ffffff;\r\n    position: relative;\r\n    border: 1px solid #5ea0f5;\r\n    border-radius: 3px;\r\n    margin: 0 auto;\r\n    top: 31px;\n}\n.ul-boxseach[data-v-13239228] {\r\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-13239228]{\r\n        line-height: 50px;\r\n    float: left;\r\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-13239228]{\r\n     text-align: center;\r\n    line-height:50px;\r\n    float: left;\r\n    width: 108px;\n}\n.branch[data-v-13239228]{\r\n    text-align: left;\r\n    width: 199px;\n}\n.check-in[data-v-13239228]{\r\n    width: 150px;\n}\n.check-out[data-v-13239228]{\r\n    width: 150px;\n}\n.adult[data-v-13239228]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.chrildren[data-v-13239228]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.rooms[data-v-13239228]{\r\nwidth: 83px;\n}\n.mx-datepicker[data-v-13239228] {\r\n    position: relative;\r\n    display: inline-block;\r\n    width: 138px;\r\n    color: #73879c;\r\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\r\n sans-serif;\n}\n.text-go[data-v-13239228]{\r\n          background: #338de6;\r\n    height: 48px;\r\n    color: #fff;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    cursor: pointer;\n}\n.modal-acr[data-v-13239228]{\r\n        width: 250px;\r\n    /* top: 3px; */\r\n    background: white;\r\n    position: absolute;\r\n    border: 1px solid #ececec;\r\n    height: 180px;\r\n    top: 53px;\r\n    right: 108px;\r\n    border-radius: 2px;\r\n        text-align: center;\r\n        z-index: 101;\n}\n.rooms[data-v-13239228]{\r\n        /* background: red; */\r\n    width: 100%;\r\n    height: 0 auto;\r\n    margin-top: 64px;\n}\n.center-rooms[data-v-13239228]{\r\n        width: 1200px;\r\n    height: 250px;\r\n    width: 1000;\r\n    margin: 0 auto;\r\n    position: relative;\n}\n.rooms-ads[data-v-13239228]{\r\n    width: 600px;\r\n    /* height: 250px; */\r\n    float: left;\n}\r\n", ""]);
 
 // exports
 
@@ -8142,7 +8231,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.read-more-img[data-v-768395a5]{\n  position: relative;\n    top: 14px;\n}\n.a-read-more[data-v-768395a5]{\n    display: block;\n    padding: 10px;\n    width: 109px;\n    border-radius: 3px;\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-768395a5]{\n      margin-left: 6px;\n    /* margin-top: 0px; */\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-768395a5]{\n          position: relative;\n    left: 22px;\n    display: block;\n    width: 250px;\n    /* background: red; */\n    color: #ececec;\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-768395a5]{\n  padding-bottom: 10px;\n    display: block;\n    position: relative;\n    text-align: left;\n    width: 686px;\n}\n.img-rooms[data-v-768395a5]{\nwidth: 250px;\n    height: 250px;\n}\n.cover-img-l[data-v-768395a5]{\n    width: 300px;\n    float: left;\n}\n.cover-letter-r[data-v-768395a5]{\n    width: 270px;\n    float: left;\n}\n.txt-img-l[data-v-768395a5]{\n}\n.rooms-ads-r[data-v-768395a5]{\n}\n.center-alert-error[data-v-768395a5]{\n}\n.txt-alert-error[data-v-768395a5]{\n      margin: 0 auto;\n    width: 503px;\n    line-height: 50px;\n    /* margin: 0 auto; */\n    color: #fff;\n    height: 50px;\n    border-radius: 3px;\n    display: block;\n    font-weight: bold;\n    background: #fd7272;\n}\n.alert-error[data-v-768395a5]{\n    width: 100%;\n    height: 50px;\n    text-align: center;\n    position: fixed;\n    top: 40px;\n}\n.choose[data-v-768395a5]{\n  color:#999;\n}\n.lao-txt[data-v-768395a5]{\n  color:#fff;\n}\n.vansana[data-v-768395a5]{\n  color:#fff;\n  font-size: 33px;\n}\n.onlinebk[data-v-768395a5]{\n  color:#fff;\n}\n.textshow[data-v-768395a5]{\n    position: relative;\n    left: 51px;\n}\n.closemodal[data-v-768395a5]{\n      position: absolute;\n    width: 100%;\n    top: 0;\n    height: 1000px;\n    z-index: 100;\n}\n.branches[data-v-768395a5]{\n      height: 34px;\n    width: 183px;\n    background: #fff;\n    border-color: #ccc;\n}\n.ul-modal[data-v-768395a5]{\n    text-align: center;\n}\n.ul-modal li[data-v-768395a5]{\n  margin-top: 16px;\n}\n.plus-adult[data-v-768395a5]{\n}\n.text-explain[data-v-768395a5]{\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-768395a5]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    right: 29px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    color: #fff;\n    background: #0892da;\n    line-height: 18px;\n}\n.input-value[data-v-768395a5]{\n outline: none;\n    height: 27px;\n    width: 90px;\n    padding-left: 14px;\n    color: #736f6f;\n    border: none;\n    background: none;\n    text-align: center;\n}\n.btn-plus-ault[data-v-768395a5]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    left: 29px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    color: #fff;\n    background: #0892da;\n    line-height: 18px;\n}\n.advertise[data-v-768395a5]{\n    \n    /* width: 100%; */\n    height: 500px;\n    padding:22px;\n}\n.center-advertise[data-v-768395a5]{\n      width: 1200px;\n      background: url(\"/imgs/advertise.jpg\");\n    height: 500px;\n    margin: 0 auto;\n    /* background: black; */\n}\n.seach-room[data-v-768395a5]{\n    width: 1000px;\n    height: 500px;\n    margin: 0 auto;\n    /* background: green; */\n}\n.box-search[data-v-768395a5]{\n             width: 100%;\n    height: 200px;\n    position: relative;\n    top: 150px;\n}\n.input-all[data-v-768395a5]{\n       width: 900px;\n    height: 50px;\n    background: #ffffff;\n    position: relative;\n    border: 1px solid #5ea0f5;\n    border-radius: 3px;\n    margin: 0 auto;\n    top: 31px;\n}\n.ul-boxseach[data-v-768395a5] {\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-768395a5]{\n        line-height: 50px;\n    float: left;\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-768395a5]{\n     text-align: center;\n    line-height:50px;\n    float: left;\n    width: 108px;\n}\n.branch[data-v-768395a5]{\n    text-align: left;\n    width: 199px;\n}\n.check-in[data-v-768395a5]{\n    width: 150px;\n}\n.check-out[data-v-768395a5]{\n    width: 150px;\n}\n.adult[data-v-768395a5]{\nwidth: 83px;  \ncursor: pointer;\n}\n.chrildren[data-v-768395a5]{\nwidth: 83px;  \ncursor: pointer;\n}\n.rooms[data-v-768395a5]{\nwidth: 83px;\n}\n.mx-datepicker[data-v-768395a5] {\n    position: relative;\n    display: inline-block;\n    width: 138px;\n    color: #73879c;\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\n sans-serif;\n}\n.text-go[data-v-768395a5]{\n          background: #338de6;\n    height: 48px;\n    color: #fff;\n    font-size: 18px;\n    font-weight: bold;\n    cursor: pointer;\n}\n.modal-acr[data-v-768395a5]{\n        width: 250px;\n    /* top: 3px; */\n    background: white;\n    position: absolute;\n    border: 1px solid #5da0f5;\n    height: 180px;\n    top: 53px;\n    right: 108px;\n    border-radius: 2px;\n        text-align: center;\n        z-index: 101;\n}\n.rooms[data-v-768395a5]{\n        /* background: red; */\n    width: 100%;\n    height: 0 auto;\n    margin-top: 64px;\n}\n.center-rooms[data-v-768395a5]{\n        width: 1200px;\n    height: 250px;\n    width: 1000;\n    margin: 0 auto;\n    position: relative;\n}\n.rooms-ads[data-v-768395a5]{\n    width: 600px;\n    /* height: 250px; */\n    float: left;\n}\n", ""]);
+exports.push([module.i, "\n.read-more-img[data-v-768395a5]{\r\n  position: relative;\r\n    top: 14px;\n}\n.a-read-more[data-v-768395a5]{\r\n    display: block;\r\n    padding: 10px;\r\n    width: 109px;\r\n    border-radius: 3px;\r\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-768395a5]{\r\n      margin-left: 6px;\r\n    /* margin-top: 0px; */\r\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-768395a5]{\r\n          position: relative;\r\n    left: 22px;\r\n    display: block;\r\n    width: 250px;\r\n    /* background: red; */\r\n    color: #ececec;\r\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-768395a5]{\r\n  padding-bottom: 10px;\r\n    display: block;\r\n    position: relative;\r\n    text-align: left;\r\n    width: 686px;\n}\n.img-rooms[data-v-768395a5]{\r\nwidth: 250px;\r\n    height: 250px;\n}\n.cover-img-l[data-v-768395a5]{\r\n    width: 300px;\r\n    float: left;\n}\n.cover-letter-r[data-v-768395a5]{\r\n    width: 270px;\r\n    float: left;\n}\n.txt-img-l[data-v-768395a5]{\n}\n.rooms-ads-r[data-v-768395a5]{\n}\n.center-alert-error[data-v-768395a5]{\n}\n.txt-alert-error[data-v-768395a5]{\r\n      margin: 0 auto;\r\n    width: 503px;\r\n    line-height: 50px;\r\n    /* margin: 0 auto; */\r\n    color: #fff;\r\n    height: 50px;\r\n    border-radius: 3px;\r\n    display: block;\r\n    font-weight: bold;\r\n    background: #fd7272;\n}\n.alert-error[data-v-768395a5]{\r\n    width: 100%;\r\n    height: 50px;\r\n    text-align: center;\r\n    position: fixed;\r\n    top: 40px;\n}\n.choose[data-v-768395a5]{\r\n  color:#999;\n}\n.lao-txt[data-v-768395a5]{\r\n  color:#fff;\n}\n.vansana[data-v-768395a5]{\r\n  color:#fff;\r\n  font-size: 33px;\n}\n.onlinebk[data-v-768395a5]{\r\n  color:#fff;\n}\n.textshow[data-v-768395a5]{\r\n    position: relative;\r\n    left: 51px;\n}\n.closemodal[data-v-768395a5]{\r\n      position: absolute;\r\n    width: 100%;\r\n    top: 0;\r\n    height: 1000px;\r\n    z-index: 100;\n}\n.branches[data-v-768395a5]{\r\n      height: 34px;\r\n    width: 183px;\r\n    background: #fff;\r\n    border-color: #ccc;\n}\n.ul-modal[data-v-768395a5]{\r\n    text-align: center;\n}\n.ul-modal li[data-v-768395a5]{\r\n  margin-top: 16px;\n}\n.plus-adult[data-v-768395a5]{\n}\n.text-explain[data-v-768395a5]{\r\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-768395a5]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    right: 29px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    color: #fff;\r\n    background: #0892da;\r\n    line-height: 18px;\n}\n.input-value[data-v-768395a5]{\r\n outline: none;\r\n    height: 27px;\r\n    width: 90px;\r\n    padding-left: 14px;\r\n    color: #736f6f;\r\n    border: none;\r\n    background: none;\r\n    text-align: center;\n}\n.btn-plus-ault[data-v-768395a5]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    left: 29px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    color: #fff;\r\n    background: #0892da;\r\n    line-height: 18px;\n}\n.advertise[data-v-768395a5]{\r\n    \r\n    /* width: 100%; */\r\n    height: 500px;\r\n    padding:22px;\n}\n.center-advertise[data-v-768395a5]{\r\n      width: 1200px;\r\n      background: url(\"/imgs/advertise.jpg\");\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    /* background: black; */\n}\n.seach-room[data-v-768395a5]{\r\n    width: 1000px;\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    /* background: green; */\n}\n.box-search[data-v-768395a5]{\r\n             width: 100%;\r\n    height: 200px;\r\n    position: relative;\r\n    top: 150px;\n}\n.input-all[data-v-768395a5]{\r\n       width: 900px;\r\n    height: 50px;\r\n    background: #ffffff;\r\n    position: relative;\r\n    border: 1px solid #5ea0f5;\r\n    border-radius: 3px;\r\n    margin: 0 auto;\r\n    top: 31px;\n}\n.ul-boxseach[data-v-768395a5] {\r\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-768395a5]{\r\n        line-height: 50px;\r\n    float: left;\r\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-768395a5]{\r\n     text-align: center;\r\n    line-height:50px;\r\n    float: left;\r\n    width: 108px;\n}\n.branch[data-v-768395a5]{\r\n    text-align: left;\r\n    width: 199px;\n}\n.check-in[data-v-768395a5]{\r\n    width: 150px;\n}\n.check-out[data-v-768395a5]{\r\n    width: 150px;\n}\n.adult[data-v-768395a5]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.chrildren[data-v-768395a5]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.rooms[data-v-768395a5]{\r\nwidth: 83px;\n}\n.mx-datepicker[data-v-768395a5] {\r\n    position: relative;\r\n    display: inline-block;\r\n    width: 138px;\r\n    color: #73879c;\r\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\r\n sans-serif;\n}\n.text-go[data-v-768395a5]{\r\n          background: #338de6;\r\n    height: 48px;\r\n    color: #fff;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    cursor: pointer;\n}\n.modal-acr[data-v-768395a5]{\r\n        width: 250px;\r\n    /* top: 3px; */\r\n    background: white;\r\n    position: absolute;\r\n    border: 1px solid #5da0f5;\r\n    height: 180px;\r\n    top: 53px;\r\n    right: 108px;\r\n    border-radius: 2px;\r\n        text-align: center;\r\n        z-index: 101;\n}\n.rooms[data-v-768395a5]{\r\n        /* background: red; */\r\n    width: 100%;\r\n    height: 0 auto;\r\n    margin-top: 64px;\n}\n.center-rooms[data-v-768395a5]{\r\n        width: 1200px;\r\n    height: 250px;\r\n    width: 1000;\r\n    margin: 0 auto;\r\n    position: relative;\n}\n.rooms-ads[data-v-768395a5]{\r\n    width: 600px;\r\n    /* height: 250px; */\r\n    float: left;\n}\r\n", ""]);
 
 // exports
 
@@ -8161,7 +8250,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.myfooter[data-v-585a4226]{\n}\n.cover-footer[data-v-585a4226]{\n    width: 100%;\n    height: 400px;\n    top: 211px;\n    position: relative;\n}\n.center-footer[data-v-585a4226]{\nwidth: 1200px;\n    margin: 0 auto;\n    text-align: center;\n}\n.txt-footer[data-v-585a4226]{\n    position: relative;\n    bottom: 94px;\n}\n", ""]);
+exports.push([module.i, "\n.myfooter[data-v-585a4226]{\n}\n.cover-footer[data-v-585a4226]{\r\n    width: 100%;\r\n    height: 400px;\r\n    top: 211px;\r\n    position: relative;\n}\n.center-footer[data-v-585a4226]{\r\nwidth: 1200px;\r\n    margin: 0 auto;\r\n    text-align: center;\n}\n.txt-footer[data-v-585a4226]{\r\n    position: relative;\r\n    bottom: 94px;\n}\r\n", ""]);
 
 // exports
 
@@ -8180,7 +8269,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.txt-color[data-v-11e733ca]{\n  color:#fff;\n}\n.menu-top-header[data-v-11e733ca] {\n  width: 100%;\n  height: 36px;\n  background:#338de6;\n}\n.under-top-header[data-v-11e733ca] {\n  width: 100%;\n    height: 37px;\n    border-bottom: 1px solid #e0e6f1;\n    background: #f5f5f5;\n}\n.menu-header[data-v-11e733ca] {\n  width: 1200px;\n  height: 36px;\n  /* background: #f5d419; */\n  margin: 0 auto;\n}\n.menu-under-header[data-v-11e733ca] {\n  width: 1200px;\n  height: 36px;\n  /* background: #f5d419; */\n  margin: 0 auto;\n}\n.navbar[data-v-11e733ca] {\n  padding: 0rem 4rem;\n  /* background: #f5d419; */\n}\n", ""]);
+exports.push([module.i, "\n.txt-color[data-v-11e733ca]{\r\n  color:#fff;\n}\n.menu-top-header[data-v-11e733ca] {\r\n  width: 100%;\r\n  height: 36px;\r\n  background:#338de6;\n}\n.under-top-header[data-v-11e733ca] {\r\n  width: 100%;\r\n    height: 37px;\r\n    border-bottom: 1px solid #e0e6f1;\r\n    background: #f5f5f5;\n}\n.menu-header[data-v-11e733ca] {\r\n  width: 1200px;\r\n  height: 36px;\r\n  /* background: #f5d419; */\r\n  margin: 0 auto;\n}\n.menu-under-header[data-v-11e733ca] {\r\n  width: 1200px;\r\n  height: 36px;\r\n  /* background: #f5d419; */\r\n  margin: 0 auto;\n}\n.navbar[data-v-11e733ca] {\r\n  padding: 0rem 4rem;\r\n  /* background: #f5d419; */\n}\r\n", ""]);
 
 // exports
 
@@ -8199,7 +8288,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.read-more-img[data-v-1c50b7bd]{\n  position: relative;\n    top: 14px;\n}\n.a-read-more[data-v-1c50b7bd]{\n    display: block;\n    padding: 10px;\n    width: 109px;\n    border-radius: 3px;\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-1c50b7bd]{\n      margin-left: 6px;\n    /* margin-top: 0px; */\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-1c50b7bd]{\n          position: relative;\n    left: 22px;\n    display: block;\n    width: 250px;\n    /* background: red; */\n    color: #ececec;\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-1c50b7bd]{\n  padding-bottom: 10px;\n    display: block;\n    position: relative;\n    text-align: left;\n    width: 686px;\n}\n.img-rooms[data-v-1c50b7bd]{\nwidth: 250px;\n    height: 250px;\n}\n.cover-img-l[data-v-1c50b7bd]{\n    width: 300px;\n    float: left;\n}\n.cover-letter-r[data-v-1c50b7bd]{\n    width: 270px;\n    float: left;\n}\n.txt-img-l[data-v-1c50b7bd]{\n}\n.rooms-ads-r[data-v-1c50b7bd]{\n}\n.center-alert-error[data-v-1c50b7bd]{\n}\n.txt-alert-error[data-v-1c50b7bd]{\n      margin: 0 auto;\n    width: 503px;\n    line-height: 50px;\n    /* margin: 0 auto; */\n    color: #fff;\n    height: 50px;\n    border-radius: 3px;\n    display: block;\n    font-weight: bold;\n    background: #fd7272;\n}\n.alert-error[data-v-1c50b7bd]{\n    width: 100%;\n    height: 50px;\n    text-align: center;\n    position: fixed;\n    top: 40px;\n}\n.choose[data-v-1c50b7bd]{\n  color:#999;\n}\n.lao-txt[data-v-1c50b7bd]{\n  color:#fff;\n}\n.vansana[data-v-1c50b7bd]{\n  color:#fff;\n  font-size: 33px;\n}\n.onlinebk[data-v-1c50b7bd]{\n  color:#fff;\n}\n.textshow[data-v-1c50b7bd]{\n    position: relative;\n    left: 51px;\n}\n.closemodal[data-v-1c50b7bd]{\n      position: absolute;\n    width: 100%;\n    top: 0;\n    height: 1000px;\n    z-index: 100;\n}\n.branches[data-v-1c50b7bd]{\n      height: 34px;\n    width: 183px;\n    background: #fff;\n    border-color: #ccc;\n}\n.ul-modal[data-v-1c50b7bd]{\n    text-align: center;\n}\n.ul-modal li[data-v-1c50b7bd]{\n  margin-top: 16px;\n}\n.plus-adult[data-v-1c50b7bd]{\n}\n.text-explain[data-v-1c50b7bd]{\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-1c50b7bd]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    right: 29px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    color: #fff;\n    background: #0892da;\n    line-height: 18px;\n}\n.input-value[data-v-1c50b7bd]{\n outline: none;\n    height: 27px;\n    width: 90px;\n    padding-left: 14px;\n    color: #736f6f;\n    border: none;\n    background: none;\n    text-align: center;\n}\n.btn-plus-ault[data-v-1c50b7bd]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    left: 29px;\n    border: none;\n    outline: none;\n    cursor: pointer;\n    color: #fff;\n    background: #0892da;\n    line-height: 18px;\n}\n.advertise[data-v-1c50b7bd]{\n    \n    /* width: 100%; */\n    height: 500px;\n    padding:22px;\n}\n.center-advertise[data-v-1c50b7bd]{\n      width: 1200px;\n      background: url(\"/imgs/advertise.jpg\");\n    height: 500px;\n    margin: 0 auto;\n    /* background: black; */\n}\n.seach-room[data-v-1c50b7bd]{\n    width: 1000px;\n    height: 500px;\n    margin: 0 auto;\n    /* background: green; */\n}\n.box-search[data-v-1c50b7bd]{\n             width: 100%;\n    height: 200px;\n    position: relative;\n    top: 150px;\n}\n.input-all[data-v-1c50b7bd]{\n       width: 900px;\n    height: 50px;\n    background: #ffffff;\n    position: relative;\n    border: 1px solid #5ea0f5;\n    border-radius: 3px;\n    margin: 0 auto;\n    top: 31px;\n}\n.ul-boxseach[data-v-1c50b7bd] {\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-1c50b7bd]{\n        line-height: 50px;\n    float: left;\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-1c50b7bd]{\n     text-align: center;\n    line-height:50px;\n    float: left;\n    width: 108px;\n}\n.branch[data-v-1c50b7bd]{\n    text-align: left;\n    width: 199px;\n}\n.check-in[data-v-1c50b7bd]{\n    width: 150px;\n}\n.check-out[data-v-1c50b7bd]{\n    width: 150px;\n}\n.adult[data-v-1c50b7bd]{\nwidth: 83px;  \ncursor: pointer;\n}\n.chrildren[data-v-1c50b7bd]{\nwidth: 83px;  \ncursor: pointer;\n}\n.rooms[data-v-1c50b7bd]{\nwidth: 83px;\n}\n.mx-datepicker[data-v-1c50b7bd] {\n    position: relative;\n    display: inline-block;\n    width: 138px;\n    color: #73879c;\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\n sans-serif;\n}\n.text-go[data-v-1c50b7bd]{\n          background: #338de6;\n    height: 48px;\n    color: #fff;\n    font-size: 18px;\n    font-weight: bold;\n    cursor: pointer;\n}\n.modal-acr[data-v-1c50b7bd]{\n        width: 250px;\n    /* top: 3px; */\n    background: white;\n    position: absolute;\n    border: 1px solid #5da0f5;\n    height: 180px;\n    top: 53px;\n    right: 108px;\n    border-radius: 2px;\n        text-align: center;\n        z-index: 101;\n}\n.rooms[data-v-1c50b7bd]{\n        /* background: red; */\n    width: 100%;\n    height: 0 auto;\n    margin-top: 64px;\n}\n.center-rooms[data-v-1c50b7bd]{\n        width: 1200px;\n    height: 250px;\n    width: 1000;\n    margin: 0 auto;\n    position: relative;\n}\n.rooms-ads[data-v-1c50b7bd]{\n    width: 600px;\n    /* height: 250px; */\n    float: left;\n}\n", ""]);
+exports.push([module.i, "\n.read-more-img[data-v-1c50b7bd]{\r\n  position: relative;\r\n    top: 14px;\n}\n.a-read-more[data-v-1c50b7bd]{\r\n    display: block;\r\n    padding: 10px;\r\n    width: 109px;\r\n    border-radius: 3px;\r\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-1c50b7bd]{\r\n      margin-left: 6px;\r\n    /* margin-top: 0px; */\r\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-1c50b7bd]{\r\n          position: relative;\r\n    left: 22px;\r\n    display: block;\r\n    width: 250px;\r\n    /* background: red; */\r\n    color: #ececec;\r\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-1c50b7bd]{\r\n  padding-bottom: 10px;\r\n    display: block;\r\n    position: relative;\r\n    text-align: left;\r\n    width: 686px;\n}\n.img-rooms[data-v-1c50b7bd]{\r\nwidth: 250px;\r\n    height: 250px;\n}\n.cover-img-l[data-v-1c50b7bd]{\r\n    width: 300px;\r\n    float: left;\n}\n.cover-letter-r[data-v-1c50b7bd]{\r\n    width: 270px;\r\n    float: left;\n}\n.txt-img-l[data-v-1c50b7bd]{\n}\n.rooms-ads-r[data-v-1c50b7bd]{\n}\n.center-alert-error[data-v-1c50b7bd]{\n}\n.txt-alert-error[data-v-1c50b7bd]{\r\n      margin: 0 auto;\r\n    width: 503px;\r\n    line-height: 50px;\r\n    /* margin: 0 auto; */\r\n    color: #fff;\r\n    height: 50px;\r\n    border-radius: 3px;\r\n    display: block;\r\n    font-weight: bold;\r\n    background: #fd7272;\n}\n.alert-error[data-v-1c50b7bd]{\r\n    width: 100%;\r\n    height: 50px;\r\n    text-align: center;\r\n    position: fixed;\r\n    top: 40px;\n}\n.choose[data-v-1c50b7bd]{\r\n  color:#999;\n}\n.lao-txt[data-v-1c50b7bd]{\r\n  color:#fff;\n}\n.vansana[data-v-1c50b7bd]{\r\n  color:#fff;\r\n  font-size: 33px;\n}\n.onlinebk[data-v-1c50b7bd]{\r\n  color:#fff;\n}\n.textshow[data-v-1c50b7bd]{\r\n    position: relative;\r\n    left: 51px;\n}\n.closemodal[data-v-1c50b7bd]{\r\n      position: absolute;\r\n    width: 100%;\r\n    top: 0;\r\n    height: 1000px;\r\n    z-index: 100;\n}\n.branches[data-v-1c50b7bd]{\r\n      height: 34px;\r\n    width: 183px;\r\n    background: #fff;\r\n    border-color: #ccc;\n}\n.ul-modal[data-v-1c50b7bd]{\r\n    text-align: center;\n}\n.ul-modal li[data-v-1c50b7bd]{\r\n  margin-top: 16px;\n}\n.plus-adult[data-v-1c50b7bd]{\n}\n.text-explain[data-v-1c50b7bd]{\r\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-1c50b7bd]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    right: 29px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    color: #fff;\r\n    background: #0892da;\r\n    line-height: 18px;\n}\n.input-value[data-v-1c50b7bd]{\r\n outline: none;\r\n    height: 27px;\r\n    width: 90px;\r\n    padding-left: 14px;\r\n    color: #736f6f;\r\n    border: none;\r\n    background: none;\r\n    text-align: center;\n}\n.btn-plus-ault[data-v-1c50b7bd]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    left: 29px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    color: #fff;\r\n    background: #0892da;\r\n    line-height: 18px;\n}\n.advertise[data-v-1c50b7bd]{\r\n    \r\n    /* width: 100%; */\r\n    height: 500px;\r\n    padding:22px;\n}\n.center-advertise[data-v-1c50b7bd]{\r\n      width: 1200px;\r\n      background: url(\"/imgs/advertise.jpg\");\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    /* background: black; */\n}\n.seach-room[data-v-1c50b7bd]{\r\n    width: 1000px;\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    /* background: green; */\n}\n.box-search[data-v-1c50b7bd]{\r\n             width: 100%;\r\n    height: 200px;\r\n    position: relative;\r\n    top: 150px;\n}\n.input-all[data-v-1c50b7bd]{\r\n       width: 900px;\r\n    height: 50px;\r\n    background: #ffffff;\r\n    position: relative;\r\n    border: 1px solid #5ea0f5;\r\n    border-radius: 3px;\r\n    margin: 0 auto;\r\n    top: 31px;\n}\n.ul-boxseach[data-v-1c50b7bd] {\r\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-1c50b7bd]{\r\n        line-height: 50px;\r\n    float: left;\r\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-1c50b7bd]{\r\n     text-align: center;\r\n    line-height:50px;\r\n    float: left;\r\n    width: 108px;\n}\n.branch[data-v-1c50b7bd]{\r\n    text-align: left;\r\n    width: 199px;\n}\n.check-in[data-v-1c50b7bd]{\r\n    width: 150px;\n}\n.check-out[data-v-1c50b7bd]{\r\n    width: 150px;\n}\n.adult[data-v-1c50b7bd]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.chrildren[data-v-1c50b7bd]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.rooms[data-v-1c50b7bd]{\r\nwidth: 83px;\n}\n.mx-datepicker[data-v-1c50b7bd] {\r\n    position: relative;\r\n    display: inline-block;\r\n    width: 138px;\r\n    color: #73879c;\r\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\r\n sans-serif;\n}\n.text-go[data-v-1c50b7bd]{\r\n          background: #338de6;\r\n    height: 48px;\r\n    color: #fff;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    cursor: pointer;\n}\n.modal-acr[data-v-1c50b7bd]{\r\n        width: 250px;\r\n    /* top: 3px; */\r\n    background: white;\r\n    position: absolute;\r\n    border: 1px solid #5da0f5;\r\n    height: 180px;\r\n    top: 53px;\r\n    right: 108px;\r\n    border-radius: 2px;\r\n        text-align: center;\r\n        z-index: 101;\n}\n.rooms[data-v-1c50b7bd]{\r\n        /* background: red; */\r\n    width: 100%;\r\n    height: 0 auto;\r\n    margin-top: 64px;\n}\n.center-rooms[data-v-1c50b7bd]{\r\n        width: 1200px;\r\n    height: 250px;\r\n    width: 1000;\r\n    margin: 0 auto;\r\n    position: relative;\n}\n.rooms-ads[data-v-1c50b7bd]{\r\n    width: 600px;\r\n    /* height: 250px; */\r\n    float: left;\n}\r\n", ""]);
 
 // exports
 
@@ -8218,7 +8307,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.lireview[data-v-4d55b89a]{\n}\n.liprice-for-night[data-v-4d55b89a]{\n    padding: 5px;\n        padding-top: 69px;\n    margin-right: 14px;\n}\n.liprice[data-v-4d55b89a]{\n}\n.litax[data-v-4d55b89a]{\n}\n.liinclude[data-v-4d55b89a]{\n}\n.liallroom[data-v-4d55b89a]{\n}\n.review[data-v-4d55b89a]{\npadding: 5px;\n    color: #fff;\n    background: #1f4250;\n    border-radius: 3px;\n}\n.rv-score[data-v-4d55b89a]{\n}\n.price-for-night[data-v-4d55b89a]{\n    color: #4e4b4b;\n    font-size: 11px;\n    position: relative;\n    top: 11px;\n}\n.price[data-v-4d55b89a]{\ncolor: #19d84f;\n    font-size: 21px;\n}\n.tax[data-v-4d55b89a]{\ncolor: #6d6d6d;\n    font-size: 11px;\n}\n.include[data-v-4d55b89a]{\n    color: #000;\n}\n.allroom[data-v-4d55b89a]{\npadding: 7px 26px;\n    position: relative;\n    color: #fff;\n    top: 27px;\n    background: #338de6;\n}\n.btnton[data-v-4d55b89a]{\n  display: block;\n    width: 93px;\n    padding: 10px;\n    border-radius: 3px;\n    color: #fff;\n    background: #1ad850;\n}\n.name-hotel[data-v-4d55b89a]{\n    color: #191919c2;\n    font-size: 17px;\n    text-decoration: none;\n}\n.seeonmap[data-v-4d55b89a]{\n}\n.pomotion[data-v-4d55b89a]{\nfont-size: 11px;\n    background: #ffd900;\n    color: #fff;\n    display: block;\n    padding: 11px;\n}\n.roomdt[data-v-4d55b89a]{\n    margin-top: 12px;\n    display: block;\n    padding-top: 27px;\n    font-size: 12px;\n    color: #000;\n}\n.txt-result-out[data-v-4d55b89a]{\n      font-size: 25px;\n    display: block;\n    color: #353535;\n    height: 64px;\n    line-height: 64px;\n}\n.search-txt-search[data-v-4d55b89a]{\n}\n.text-detail-room[data-v-4d55b89a]{\n    position: relative;\n    top: 4px;\n}\n.text-detail-room li[data-v-4d55b89a] {\nwidth: 260px;\n    text-align: left;\n    /* padding-top: 2px; */\n    margin-top: 6px;\n}\n.text-detail-room li a[data-v-4d55b89a]{\n}\n.text-detail-room-right[data-v-4d55b89a]{\n        text-align: right;\n    position: relative;\n    top: 17px;\n}\n.text-detail-room-right li[data-v-4d55b89a] {\n    /* padding: 5px; */\n    margin-right: 14px;\n}\n.text-detail-room-right li a[data-v-4d55b89a]{\n}\n.left-result-search[data-v-4d55b89a]{\n    text-align: center;\n    position: relative;\n    width: 170px;\n    margin: 0 auto;\n    top: 13px;\n}\n.left-result-search li[data-v-4d55b89a]{\n      padding: 3px;\n    margin-top: 6px;\n    width: 170px;\n    border-radius: 3px;\n    padding-left: 14px;\n    text-align: left;\n    background: #ffffff;\n    border: 1px solid #a8e2ff;\n}\n.img-detail-res[data-v-4d55b89a]{\n    width: 220px;\n    height: 220px;\n    border-radius: 3px;\n    position: relative;\n    box-shadow: 0px 0px 11px #343a4017;\n    top: -29px;\n}\n.cover-search-box[data-v-4d55b89a]{\n      width: 100%;\n    text-align: center;\n    height: 400px;\n    /* background: red; */\n}\n.center-searchbox[data-v-4d55b89a]{\n    width: 1000px;\n    height: 400px;\n    /* top: -25px; */\n    position: relative;\n    /* background: blue; */\n    margin: 0 auto;\n}\n.left-search-box[data-v-4d55b89a]{\n       float: left;\n    width: 207px;\n    text-align: center;\n    height: 300px;\n    border-radius: 3px;\n    /* border: 1px solid #338de6; */\n    position: relative;\n    /* background: #f8fafc; */\n}\n.right-search-box[data-v-4d55b89a]{\n      margin-top: 7px;\n\n    width: 780px;\n    height: 300px;\n    position: relative;\n    border-radius: 3px;\n    background: #fff;\n    float: right;\n    box-sizing: border-box;\n    box-shadow: 0px 0px 11px #343a4017;\n    border: 1px solid #c1c1c157;\n}\n.cover-result-search[data-v-4d55b89a]{\n    width: 100%;\n    height: 300px;\n    /* background: rebeccapurple; */\n}\n.pic-result[data-v-4d55b89a]{\n   width: 250px;\n    height: 250px;\n    position: relative;\n    /* background: yellow; */\n    float: left;\n    line-height: 300px;\n}\n.detail-result[data-v-4d55b89a]{\n    width: 520px;\n    height: 300px;\n    position: relative;\n    /* background: #71ab99; */\n    float: right;\n}\n.left-detail-txt[data-v-4d55b89a]{\n    width: 260px;\n    height: 300px;\n    float: left;\n    position: relative;\n    /* background: #5d4646; */\n}\n.right-detail-txt[data-v-4d55b89a]{\n    width: 260px;\n    height: 300px;\n    float: right;\n    position: relative;\n    /* background: #6d3a3a; */\n}\n.txt-left[data-v-4d55b89a]{\n      position: absolute;\n    left: 24px;\n}\n.read-more-img[data-v-4d55b89a]{\n  position: relative;\n    top: 14px;\n}\n.a-read-more[data-v-4d55b89a]{\n    display: block;\n    padding: 10px;\n    width: 122px;\n    border-radius: 3px;\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-4d55b89a]{\n      margin-left: 6px;\n    /* margin-top: 0px; */\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-4d55b89a]{\n          position: relative;\n    left: 22px;\n    display: block;\n    width: 212px;\n    /* background: red; */\n    color: #ececec;\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-4d55b89a]{\n  padding-bottom: 10px;\n    display: block;\n    position: relative;\n    text-align: left;\n    width: 686px;\n}\n.img-rooms[data-v-4d55b89a]{\nwidth: 250px;\n    height: 250px;\n}\n.cover-img-l[data-v-4d55b89a]{\n    width: 300px;\n    float: left;\n}\n.cover-letter-r[data-v-4d55b89a]{\n    width: 270px;\n    float: left;\n}\n.txt-img-l[data-v-4d55b89a]{\n}\n.rooms-ads-r[data-v-4d55b89a]{\n}\n.center-alert-error[data-v-4d55b89a]{\n}\n.txt-alert-error[data-v-4d55b89a]{\n      margin: 0 auto;\n    width: 503px;\n    line-height: 50px;\n    /* margin: 0 auto; */\n    color: #fff;\n    height: 50px;\n    border-radius: 3px;\n    display: block;\n    font-weight: bold;\n    background: #fd7272;\n}\n.alert-error[data-v-4d55b89a]{\n    width: 100%;\n    height: 50px;\n    text-align: center;\n    position: fixed;\n    top: 40px;\n}\n.choose[data-v-4d55b89a]{\n  color:#999;\n}\n.lao-txt[data-v-4d55b89a]{\n  color:#fff;\n}\n.vansana[data-v-4d55b89a]{\n  color:#292929;\n  font-size: 33px;\n}\n.onlinebk[data-v-4d55b89a]{\n  color:#868484;\n}\n.textshow[data-v-4d55b89a]{\n    position: relative;\n    left: 51px;\n}\n.closemodal[data-v-4d55b89a]{\n      position: absolute;\n    width: 100%;\n    top: 0;\n    height: 1000px;\n    z-index: 100;\n}\n.branches[data-v-4d55b89a]{\n      height: 34px;\n    width: 183px;\n    background: #fff;\n    border-color: #ccc;\n}\n.ul-modal[data-v-4d55b89a]{\n    text-align: center;\n}\n.ul-modal li[data-v-4d55b89a]{\n  margin-top: 16px;\n}\n.plus-adult[data-v-4d55b89a]{\n}\n.text-explain[data-v-4d55b89a]{\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-4d55b89a]{\n        width: 30px;\n    height: 26px;\n    position: relative;\n    right: -70px;\n    border: none;\n    border: 1px solid #0892da;\n    outline: none;\n    cursor: pointer;\n    border-radius: 2px;\n    color: #0892da;\n    /* background: #58575a; */\n    line-height: 18px;\n}\n.input-value[data-v-4d55b89a]{\n     outline: none;\n    height: 27px;\n    width: 90px;\n    /* z-index: 100000; */\n    position: relative;\n    /* padding-left: 67px; */\n    left: 20px;\n    color: #736f6f;\n    border: none;\n    background: none;\n    text-align: right;\n}\n.btn-plus-ault[data-v-4d55b89a]{\n    width: 30px;\n    height: 26px;\n    position: relative;\n    left: 29px;\n    border: none;\n    outline: none;\n     border: 1px solid #0892da;\n    cursor: pointer;\n    color: #0892da;\n    /* background: #0892da; */\n    line-height: 18px;\n}\n.advertise[data-v-4d55b89a]{\n    \n    /* width: 100%; */\n    height: 300px;\n    padding:22px;\n}\n.center-advertise[data-v-4d55b89a]{\n      width: 1200px;\n      /* background: url(\"/imgs/advertise.jpg\"); */\n    height: 300px;\n    margin: 0 auto;\n    /* background: black; */\n}\n.seach-room[data-v-4d55b89a]{\n    width: 1000px;\n    height: 300px;\n    margin: 0 auto;\n    /* background: green; */\n}\n.box-search[data-v-4d55b89a]{\n             width: 100%;\n    height: 200px;\n    position: relative;\n    top: 50px;\n}\n.input-all[data-v-4d55b89a]{\n       width: 900px;\n    height: 50px;\n    background: #ffffff;\n    position: relative;\n    border: 1px solid #5ea0f5;\n    border-radius: 3px;\n    margin: 0 auto;\n    top: 31px;\n}\n.ul-boxseach[data-v-4d55b89a] {\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-4d55b89a]{\n        line-height: 50px;\n    float: left;\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-4d55b89a]{\n     text-align: center;\n    line-height:50px;\n    float: left;\n    width: 108px;\n}\n.branch[data-v-4d55b89a]{\n    text-align: left;\n    width: 199px;\n}\n.check-in[data-v-4d55b89a]{\n    width: 150px;\n}\n.check-out[data-v-4d55b89a]{\n    width: 150px;\n}\n.adult[data-v-4d55b89a]{\nwidth: 83px;  \ncursor: pointer;\n}\n.chrildren[data-v-4d55b89a]{\nwidth: 83px;  \ncursor: pointer;\n}\n.rooms[data-v-4d55b89a]{\nwidth: 83px;\n}\n.mx-datepicker[data-v-4d55b89a] {\n    position: relative;\n    display: inline-block;\n    width: 138px;\n    color: #73879c;\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\n sans-serif;\n}\n.text-go[data-v-4d55b89a]{\n          background: #338de6;\n    height: 48px;\n    color: #fff;\n    font-size: 18px;\n    font-weight: bold;\n    cursor: pointer;\n}\n.modal-acr[data-v-4d55b89a]{\n        width: 250px;\n    /* top: 3px; */\n    background: white;\n    position: absolute;\n    border: 1px solid #ececec;\n    height: 180px;\n    top: 53px;\n    right: 108px;\n    border-radius: 2px;\n        text-align: center;\n        z-index: 101;\n}\n.rooms[data-v-4d55b89a]{\n        /* background: red; */\n    width: 100%;\n    height: 0 auto;\n    margin-top: 64px;\n}\n.center-rooms[data-v-4d55b89a]{\n        width: 1200px;\n    height: 250px;\n    width: 1000;\n    margin: 0 auto;\n    position: relative;\n}\n.rooms-ads[data-v-4d55b89a]{\n    width: 600px;\n    /* height: 250px; */\n    float: left;\n}\n", ""]);
+exports.push([module.i, "\n.lireview[data-v-4d55b89a]{\n}\n.liprice-for-night[data-v-4d55b89a]{\r\n    padding: 5px;\r\n        padding-top: 69px;\r\n    margin-right: 14px;\n}\n.liprice[data-v-4d55b89a]{\n}\n.litax[data-v-4d55b89a]{\n}\n.liinclude[data-v-4d55b89a]{\n}\n.liallroom[data-v-4d55b89a]{\n}\n.review[data-v-4d55b89a]{\r\npadding: 5px;\r\n    color: #fff;\r\n    background: #1f4250;\r\n    border-radius: 3px;\n}\n.rv-score[data-v-4d55b89a]{\n}\n.price-for-night[data-v-4d55b89a]{\r\n    color: #4e4b4b;\r\n    font-size: 11px;\r\n    position: relative;\r\n    top: 11px;\n}\n.price[data-v-4d55b89a]{\r\ncolor: #19d84f;\r\n    font-size: 21px;\n}\n.tax[data-v-4d55b89a]{\r\ncolor: #6d6d6d;\r\n    font-size: 11px;\n}\n.include[data-v-4d55b89a]{\r\n    color: #000;\n}\n.allroom[data-v-4d55b89a]{\r\npadding: 7px 26px;\r\n    position: relative;\r\n    color: #fff;\r\n    top: 27px;\r\n    background: #338de6;\n}\n.btnton[data-v-4d55b89a]{\r\n  display: block;\r\n    width: 93px;\r\n    padding: 10px;\r\n    border-radius: 3px;\r\n    color: #fff;\r\n    background: #1ad850;\n}\n.name-hotel[data-v-4d55b89a]{\r\n    color: #191919c2;\r\n    font-size: 17px;\r\n    text-decoration: none;\n}\n.seeonmap[data-v-4d55b89a]{\n}\n.pomotion[data-v-4d55b89a]{\r\nfont-size: 11px;\r\n    background: #ffd900;\r\n    color: #fff;\r\n    display: block;\r\n    padding: 11px;\n}\n.roomdt[data-v-4d55b89a]{\r\n    margin-top: 12px;\r\n    display: block;\r\n    padding-top: 27px;\r\n    font-size: 12px;\r\n    color: #000;\n}\n.txt-result-out[data-v-4d55b89a]{\r\n      font-size: 25px;\r\n    display: block;\r\n    color: #353535;\r\n    height: 64px;\r\n    line-height: 64px;\n}\n.search-txt-search[data-v-4d55b89a]{\n}\n.text-detail-room[data-v-4d55b89a]{\r\n    position: relative;\r\n    top: 4px;\n}\n.text-detail-room li[data-v-4d55b89a] {\r\nwidth: 260px;\r\n    text-align: left;\r\n    /* padding-top: 2px; */\r\n    margin-top: 6px;\n}\n.text-detail-room li a[data-v-4d55b89a]{\n}\n.text-detail-room-right[data-v-4d55b89a]{\r\n        text-align: right;\r\n    position: relative;\r\n    top: 17px;\n}\n.text-detail-room-right li[data-v-4d55b89a] {\r\n    /* padding: 5px; */\r\n    margin-right: 14px;\n}\n.text-detail-room-right li a[data-v-4d55b89a]{\n}\n.left-result-search[data-v-4d55b89a]{\r\n    text-align: center;\r\n    position: relative;\r\n    width: 170px;\r\n    margin: 0 auto;\r\n    top: 13px;\n}\n.left-result-search li[data-v-4d55b89a]{\r\n      padding: 3px;\r\n    margin-top: 6px;\r\n    width: 170px;\r\n    border-radius: 3px;\r\n    padding-left: 14px;\r\n    text-align: left;\r\n    background: #ffffff;\r\n    border: 1px solid #a8e2ff;\n}\n.img-detail-res[data-v-4d55b89a]{\r\n    width: 220px;\r\n    height: 220px;\r\n    border-radius: 3px;\r\n    position: relative;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    top: -29px;\n}\n.cover-search-box[data-v-4d55b89a]{\r\n      width: 100%;\r\n    text-align: center;\r\n    height: 400px;\r\n    /* background: red; */\n}\n.center-searchbox[data-v-4d55b89a]{\r\n    width: 1000px;\r\n    height: 400px;\r\n    /* top: -25px; */\r\n    position: relative;\r\n    /* background: blue; */\r\n    margin: 0 auto;\n}\n.left-search-box[data-v-4d55b89a]{\r\n       float: left;\r\n    width: 207px;\r\n    text-align: center;\r\n    height: 300px;\r\n    border-radius: 3px;\r\n    /* border: 1px solid #338de6; */\r\n    position: relative;\r\n    /* background: #f8fafc; */\n}\n.right-search-box[data-v-4d55b89a]{\r\n      margin-top: 7px;\r\n\r\n    width: 780px;\r\n    height: 300px;\r\n    position: relative;\r\n    border-radius: 3px;\r\n    background: #fff;\r\n    float: right;\r\n    box-sizing: border-box;\r\n    box-shadow: 0px 0px 11px #343a4017;\r\n    border: 1px solid #c1c1c157;\n}\n.cover-result-search[data-v-4d55b89a]{\r\n    width: 100%;\r\n    height: 300px;\r\n    /* background: rebeccapurple; */\n}\n.pic-result[data-v-4d55b89a]{\r\n   width: 250px;\r\n    height: 250px;\r\n    position: relative;\r\n    /* background: yellow; */\r\n    float: left;\r\n    line-height: 300px;\n}\n.detail-result[data-v-4d55b89a]{\r\n    width: 520px;\r\n    height: 300px;\r\n    position: relative;\r\n    /* background: #71ab99; */\r\n    float: right;\n}\n.left-detail-txt[data-v-4d55b89a]{\r\n    width: 260px;\r\n    height: 300px;\r\n    float: left;\r\n    position: relative;\r\n    /* background: #5d4646; */\n}\n.right-detail-txt[data-v-4d55b89a]{\r\n    width: 260px;\r\n    height: 300px;\r\n    float: right;\r\n    position: relative;\r\n    /* background: #6d3a3a; */\n}\n.txt-left[data-v-4d55b89a]{\r\n      position: absolute;\r\n    left: 24px;\n}\n.read-more-img[data-v-4d55b89a]{\r\n  position: relative;\r\n    top: 14px;\n}\n.a-read-more[data-v-4d55b89a]{\r\n    display: block;\r\n    padding: 10px;\r\n    width: 122px;\r\n    border-radius: 3px;\r\n    border: 1px solid #ebeef1;\n}\n.a-read-more i[data-v-4d55b89a]{\r\n      margin-left: 6px;\r\n    /* margin-top: 0px; */\r\n    font-size: 13px;\n}\n.txt-cover-imgs[data-v-4d55b89a]{\r\n          position: relative;\r\n    left: 22px;\r\n    display: block;\r\n    width: 212px;\r\n    /* background: red; */\r\n    color: #ececec;\r\n    bottom: 87px;\n}\n.txt-room-top h3[data-v-4d55b89a]{\r\n  padding-bottom: 10px;\r\n    display: block;\r\n    position: relative;\r\n    text-align: left;\r\n    width: 686px;\n}\n.img-rooms[data-v-4d55b89a]{\r\nwidth: 250px;\r\n    height: 250px;\n}\n.cover-img-l[data-v-4d55b89a]{\r\n    width: 300px;\r\n    float: left;\n}\n.cover-letter-r[data-v-4d55b89a]{\r\n    width: 270px;\r\n    float: left;\n}\n.txt-img-l[data-v-4d55b89a]{\n}\n.rooms-ads-r[data-v-4d55b89a]{\n}\n.center-alert-error[data-v-4d55b89a]{\n}\n.txt-alert-error[data-v-4d55b89a]{\r\n      margin: 0 auto;\r\n    width: 503px;\r\n    line-height: 50px;\r\n    /* margin: 0 auto; */\r\n    color: #fff;\r\n    height: 50px;\r\n    border-radius: 3px;\r\n    display: block;\r\n    font-weight: bold;\r\n    background: #fd7272;\n}\n.alert-error[data-v-4d55b89a]{\r\n    width: 100%;\r\n    height: 50px;\r\n    text-align: center;\r\n    position: fixed;\r\n    top: 40px;\n}\n.choose[data-v-4d55b89a]{\r\n  color:#999;\n}\n.lao-txt[data-v-4d55b89a]{\r\n  color:#fff;\n}\n.vansana[data-v-4d55b89a]{\r\n  color:#292929;\r\n  font-size: 33px;\n}\n.onlinebk[data-v-4d55b89a]{\r\n  color:#868484;\n}\n.textshow[data-v-4d55b89a]{\r\n    position: relative;\r\n    left: 51px;\n}\n.closemodal[data-v-4d55b89a]{\r\n      position: absolute;\r\n    width: 100%;\r\n    top: 0;\r\n    height: 1000px;\r\n    z-index: 100;\n}\n.branches[data-v-4d55b89a]{\r\n      height: 34px;\r\n    width: 183px;\r\n    background: #fff;\r\n    border-color: #ccc;\n}\n.ul-modal[data-v-4d55b89a]{\r\n    text-align: center;\n}\n.ul-modal li[data-v-4d55b89a]{\r\n  margin-top: 16px;\n}\n.plus-adult[data-v-4d55b89a]{\n}\n.text-explain[data-v-4d55b89a]{\r\n  color: #9e9e9e;\n}\n.btn-minus-ault[data-v-4d55b89a]{\r\n        width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    right: -70px;\r\n    border: none;\r\n    border: 1px solid #0892da;\r\n    outline: none;\r\n    cursor: pointer;\r\n    border-radius: 2px;\r\n    color: #0892da;\r\n    /* background: #58575a; */\r\n    line-height: 18px;\n}\n.input-value[data-v-4d55b89a]{\r\n     outline: none;\r\n    height: 27px;\r\n    width: 90px;\r\n    /* z-index: 100000; */\r\n    position: relative;\r\n    /* padding-left: 67px; */\r\n    left: 20px;\r\n    color: #736f6f;\r\n    border: none;\r\n    background: none;\r\n    text-align: right;\n}\n.btn-plus-ault[data-v-4d55b89a]{\r\n    width: 30px;\r\n    height: 26px;\r\n    position: relative;\r\n    left: 29px;\r\n    border: none;\r\n    outline: none;\r\n     border: 1px solid #0892da;\r\n    cursor: pointer;\r\n    color: #0892da;\r\n    /* background: #0892da; */\r\n    line-height: 18px;\n}\n.advertise[data-v-4d55b89a]{\r\n    \r\n    /* width: 100%; */\r\n    height: 300px;\r\n    padding:22px;\n}\n.center-advertise[data-v-4d55b89a]{\r\n      width: 1200px;\r\n      /* background: url(\"/imgs/advertise.jpg\"); */\r\n    height: 300px;\r\n    margin: 0 auto;\r\n    /* background: black; */\n}\n.seach-room[data-v-4d55b89a]{\r\n    width: 1000px;\r\n    height: 300px;\r\n    margin: 0 auto;\r\n    /* background: green; */\n}\n.box-search[data-v-4d55b89a]{\r\n             width: 100%;\r\n    height: 200px;\r\n    position: relative;\r\n    top: 50px;\n}\n.input-all[data-v-4d55b89a]{\r\n       width: 900px;\r\n    height: 50px;\r\n    background: #ffffff;\r\n    position: relative;\r\n    border: 1px solid #5ea0f5;\r\n    border-radius: 3px;\r\n    margin: 0 auto;\r\n    top: 31px;\n}\n.ul-boxseach[data-v-4d55b89a] {\r\n    widows: 100%;\n}\n.ul-boxseach .li-center[data-v-4d55b89a]{\r\n        line-height: 50px;\r\n    float: left;\r\n    border-right: 1px solid #1f1f1f1a;\n}\n.last-li[data-v-4d55b89a]{\r\n     text-align: center;\r\n    line-height:50px;\r\n    float: left;\r\n    width: 108px;\n}\n.branch[data-v-4d55b89a]{\r\n    text-align: left;\r\n    width: 199px;\n}\n.check-in[data-v-4d55b89a]{\r\n    width: 150px;\n}\n.check-out[data-v-4d55b89a]{\r\n    width: 150px;\n}\n.adult[data-v-4d55b89a]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.chrildren[data-v-4d55b89a]{\r\nwidth: 83px;  \r\ncursor: pointer;\n}\n.rooms[data-v-4d55b89a]{\r\nwidth: 83px;\n}\n.mx-datepicker[data-v-4d55b89a] {\r\n    position: relative;\r\n    display: inline-block;\r\n    width: 138px;\r\n    color: #73879c;\r\n    font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',\r\n sans-serif;\n}\n.text-go[data-v-4d55b89a]{\r\n          background: #338de6;\r\n    height: 48px;\r\n    color: #fff;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n    cursor: pointer;\n}\n.modal-acr[data-v-4d55b89a]{\r\n        width: 250px;\r\n    /* top: 3px; */\r\n    background: white;\r\n    position: absolute;\r\n    border: 1px solid #ececec;\r\n    height: 180px;\r\n    top: 53px;\r\n    right: 108px;\r\n    border-radius: 2px;\r\n        text-align: center;\r\n        z-index: 101;\n}\n.rooms[data-v-4d55b89a]{\r\n        /* background: red; */\r\n    width: 100%;\r\n    height: 0 auto;\r\n    margin-top: 64px;\n}\n.center-rooms[data-v-4d55b89a]{\r\n        width: 1200px;\r\n    height: 250px;\r\n    width: 1000;\r\n    margin: 0 auto;\r\n    position: relative;\n}\n.rooms-ads[data-v-4d55b89a]{\r\n    width: 600px;\r\n    /* height: 250px; */\r\n    float: left;\n}\r\n", ""]);
 
 // exports
 
@@ -40847,7 +40936,7 @@ var render = function() {
             expression: "seemore == true"
           }
         ],
-        staticClass: "cover-modal-rooms"
+        staticClass: "cover-modal-rooms cover-height"
       },
       [
         _vm.loadermodal !== false
@@ -40871,6 +40960,23 @@ var render = function() {
                   }
                 },
                 [_c("i", { staticClass: "fa fa-times-circle" })]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.loadermodal == false
+          ? _c("div", { staticClass: "close-modal-rooms" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn-clsoe-back",
+                  on: {
+                    click: function($event) {
+                      _vm.seemore = false
+                    }
+                  }
+                },
+                [_vm._v("Go Back")]
               )
             ])
           : _vm._e(),
@@ -40927,11 +41033,315 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _vm._m(10),
+                    _c("div", { staticClass: "right-search-box" }, [
+                      _c("div", { staticClass: "cover-result-search" }, [
+                        _vm._m(10),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "detail-result" }, [
+                          _c("div", { staticClass: "left-detail-txt" }, [
+                            _c("ul", { staticClass: "text-detail-room" }, [
+                              _vm._m(11),
+                              _vm._v(" "),
+                              _vm._m(12),
+                              _vm._v(" "),
+                              _vm._m(13),
+                              _vm._v(" "),
+                              _vm._m(14),
+                              _vm._v(" "),
+                              _c("li", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btnton ltx",
+                                    attrs: { href: "#" },
+                                    on: { click: _vm.registerroom }
+                                  },
+                                  [_vm._v("ຈອງຕອນນີ້  ")]
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _vm._m(15)
+                        ])
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _vm._m(11),
+                    _vm.loader_md_register == true
+                      ? _c("div", { staticClass: "cv_loader" }, [_vm._m(16)])
+                      : _vm._e(),
                     _vm._v(" "),
-                    _vm._m(12)
+                    _vm.loader_md_register == false
+                      ? _c("div", { staticClass: "rsb-modal-register" }, [
+                          _c(
+                            "div",
+                            { staticClass: "cover-result-search crs-modal" },
+                            [
+                              _c("div", { staticClass: "pc-modal-register" }, [
+                                _c("div", { staticClass: "top_check_b" }, [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass: "back_to_page ltx",
+                                      on: {
+                                        click: function($event) {
+                                          _vm.register_modal = false
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("ກັບຄືນ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "lb_why_you_guest ltx",
+                                      attrs: { for: "why_you_guest" }
+                                    },
+                                    [_vm._v("ທ່ານກໍາລັງເດີນທາງໄປເຮັດວຽກຢູ່ບໍ?")]
+                                  ),
+                                  _c("br"),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.work_or_not,
+                                        expression: "work_or_not"
+                                      }
+                                    ],
+                                    staticClass: "why_you_guest",
+                                    attrs: {
+                                      type: "radio",
+                                      id: "why_you_guest",
+                                      name: "work_or_not"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(_vm.work_or_not, null)
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.work_or_not = null
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.work_or_not,
+                                        expression: "work_or_not"
+                                      }
+                                    ],
+                                    staticClass: "why_you_guest",
+                                    attrs: {
+                                      type: "radio",
+                                      id: "why_you_guest",
+                                      name: "work_or_not"
+                                    },
+                                    domProps: {
+                                      checked: _vm._q(_vm.work_or_not, null)
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        _vm.work_or_not = null
+                                      }
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "bottom_input" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "lb_title_guest ltx",
+                                      attrs: { for: "title_guest" }
+                                    },
+                                    [_vm._v("ເພດ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "select",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.value_title,
+                                          expression: "value_title"
+                                        }
+                                      ],
+                                      staticClass: "title_guest",
+                                      attrs: {
+                                        type: "text",
+                                        id: "title_guest"
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          var $$selectedVal = Array.prototype.filter
+                                            .call(
+                                              $event.target.options,
+                                              function(o) {
+                                                return o.selected
+                                              }
+                                            )
+                                            .map(function(o) {
+                                              var val =
+                                                "_value" in o
+                                                  ? o._value
+                                                  : o.value
+                                              return val
+                                            })
+                                          _vm.value_title = $event.target
+                                            .multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        }
+                                      }
+                                    },
+                                    _vm._l(_vm.title_m, function(data) {
+                                      return _c(
+                                        "option",
+                                        {
+                                          staticClass: "option_guest",
+                                          domProps: { value: data }
+                                        },
+                                        [_vm._v(_vm._s(data))]
+                                      )
+                                    }),
+                                    0
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "lb_name_guest ltx",
+                                      attrs: { for: "name_guest" }
+                                    },
+                                    [_vm._v("ຊື່")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "name_guest",
+                                    attrs: { type: "text", id: "name_guest" }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "lb_lastname_guest ltx",
+                                      attrs: { for: "lastname_guest" }
+                                    },
+                                    [_vm._v("ນາມສະກຸນ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "lastname_guest",
+                                    attrs: {
+                                      type: "text",
+                                      id: "lastname_guest"
+                                    }
+                                  }),
+                                  _c("br"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "lb_email_guest ltx",
+                                      attrs: { for: "email_guest" }
+                                    },
+                                    [_vm._v("ອີເມລ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "email_guest",
+                                    attrs: { type: "text", id: "email_guest" }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "lb_cf_email_guest ltx",
+                                      attrs: { for: "cf_email_guest" }
+                                    },
+                                    [_vm._v("ຄອນເຟີມ ອີເມລ")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass: "cf_email_guest",
+                                    attrs: {
+                                      type: "text",
+                                      id: "cf_email_guest"
+                                    }
+                                  })
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "rsb-modal" }, [
+                      _c(
+                        "div",
+                        { staticClass: "cover-result-search crs-modal" },
+                        [
+                          _c("table", { staticClass: "tb_room_detail" }, [
+                            _vm._m(17),
+                            _vm._v(" "),
+                            _c("tbody", { staticClass: "tbody_room_detail" }, [
+                              _c("tr", [
+                                _c("td", { staticClass: "td_tb_Room" }, [
+                                  _vm._v(
+                                    "2 twin beds  ຶ\nBalcony, City view  Air conditioning  Private bathroom  Free WiFi\n• Balcony  • TV  • Telephone  • Cable channels  • Safe  • Sitting area  • Wardrobe or closet  • Shower  • Free toiletries  • Toilet  • Minibar  • Refrigerator  • Electric kettle\nPrices are per room for 3 nights\nIncluded: 10 % TAX, 10 % Property service charge, Breakfast"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(18),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "td_tb_Price" }, [
+                                  _vm._v("1,800,000")
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "td_tb_choice" }, [
+                                  _vm._v(
+                                    "Breakfast included in the price\n                            Non-refundable\n                            NO PREPAYMENT NEEDED – pay at the property\n                            "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  { staticClass: "td_tb_empty_sleect" },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "ltx btn-confirm-der",
+                                        on: { click: _vm.registerroom }
+                                      },
+                                      [_vm._v("ຈອງຕອນນີ້")]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ])
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm.register_modal == false
+                      ? _c("div", { staticClass: "rsb-modal" }, [_vm._m(19)])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.register_modal == false
+                      ? _c("div", { staticClass: "rsb-modal-desc" }, [
+                          _vm._m(20)
+                        ])
+                      : _vm._e()
                   ])
                 : _vm._e()
             ])
@@ -41226,92 +41636,94 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "right-search-box" }, [
-      _c("div", { staticClass: "cover-result-search" }, [
-        _c("div", { staticClass: "pic-result" }, [
-          _c("img", {
-            staticClass: "img-detail-res",
-            attrs: { src: "imgs/room1.jpg", alt: "" }
-          })
+    return _c("div", { staticClass: "pic-result" }, [
+      _c("img", {
+        staticClass: "img-detail-res",
+        attrs: { src: "imgs/room1.jpg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { staticClass: "name-hotel", attrs: { href: "" } }, [
+        _c("i", { staticClass: "fa fa-map-marker-alt" }),
+        _vm._v(" Vansana Riverside")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { staticClass: "seeonmap", attrs: { href: "" } }, [
+        _vm._v("see on map")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { staticClass: "pomotion ltx", attrs: { href: "" } }, [
+        _vm._v("\n1 ຄົນອື່ນເບິ່ງຫາວັນທີຂອງທ່ານໃນ 10 ນາທີສຸດທ້າຍ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { staticClass: "roomdt", attrs: { href: "" } }, [
+        _vm._v("Standard Twin Room  ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "right-detail-txt" }, [
+      _c("ul", { staticClass: "text-detail-room-right" }, [
+        _c("li", { staticClass: "lireview" }, [
+          _c("a", { staticClass: "review ltx", attrs: { href: "" } }, [
+            _c("span", { staticClass: "rv-score" }),
+            _vm._v(" 6.5")
+          ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "detail-result" }, [
-          _c("div", { staticClass: "left-detail-txt" }, [
-            _c("ul", { staticClass: "text-detail-room" }, [
-              _c("li", [
-                _c("a", { staticClass: "name-hotel", attrs: { href: "" } }, [
-                  _c("i", { staticClass: "fa fa-map-marker-alt" }),
-                  _vm._v(" Vansana Riverside")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "seeonmap", attrs: { href: "" } }, [
-                  _vm._v("see on map")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "pomotion ltx", attrs: { href: "" } }, [
-                  _vm._v("\n1 ຄົນອື່ນເບິ່ງຫາວັນທີຂອງທ່ານໃນ 10 ນາທີສຸດທ້າຍ")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "roomdt", attrs: { href: "" } }, [
-                  _vm._v("Standard Twin Room  ")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "btnton ltx", attrs: { href: "" } }, [
-                  _vm._v("ຈອງຕອນນີ້  ")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "right-detail-txt" }, [
-            _c("ul", { staticClass: "text-detail-room-right" }, [
-              _c("li", { staticClass: "lireview" }, [
-                _c("a", { staticClass: "review ltx", attrs: { href: "" } }, [
-                  _c("span", { staticClass: "rv-score" }),
-                  _vm._v(" 6.5")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "liprice-for-night" }, [
-                _c(
-                  "a",
-                  { staticClass: "price-for-night ltx", attrs: { href: "" } },
-                  [_vm._v("ລາຄາຕໍຄືນ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "liprice" }, [
-                _c("a", { staticClass: "price ltx", attrs: { href: "" } }, [
-                  _vm._v("7,550,000 ກີບ")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "litax" }, [
-                _c("a", { staticClass: "tax ltx", attrs: { href: "" } }, [
-                  _vm._v("ປະກອບພາສີ ຄ່າທຳນຽມ")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "liinclude" }, [
-                _c("a", { staticClass: "include ltx", attrs: { href: "" } }, [
-                  _vm._v("ລວມທັ້ງອາຫານເຊົ້າ")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "liallroom" }, [
-                _c("a", { staticClass: "allroom ltx", attrs: { href: "" } }, [
-                  _vm._v("ເບິ່ງຫ້ອງທັງໝົດ")
-                ])
-              ])
-            ])
+        _c("li", { staticClass: "liprice-for-night" }, [
+          _c("a", { staticClass: "price-for-night ltx", attrs: { href: "" } }, [
+            _vm._v("ລາຄາຕໍຄືນ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "liprice" }, [
+          _c("a", { staticClass: "price ltx", attrs: { href: "" } }, [
+            _vm._v("7,550,000 ກີບ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "litax" }, [
+          _c("a", { staticClass: "tax ltx", attrs: { href: "" } }, [
+            _vm._v("ປະກອບພາສີ ຄ່າທຳນຽມ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "liinclude" }, [
+          _c("a", { staticClass: "include ltx", attrs: { href: "" } }, [
+            _vm._v("ລວມທັ້ງອາຫານເຊົ້າ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "liallroom" }, [
+          _c("a", { staticClass: "allroom ltx", attrs: { href: "" } }, [
+            _vm._v("ເບິ່ງຫ້ອງທັງໝົດ")
           ])
         ])
       ])
@@ -41321,14 +41733,46 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "rsb-modal" }, [
-      _c("div", { staticClass: "cover-result-search crs-modal" }, [
-        _c("div", { staticClass: "pc-modal" }, [
-          _c("img", {
-            staticClass: "img-detail-res-model",
-            attrs: { src: "imgs/room1.jpg", alt: "" }
-          })
-        ])
+    return _c(
+      "div",
+      { staticClass: "lds-ring", attrs: { id: "search-loader-register" } },
+      [_c("div"), _c("div"), _c("div"), _c("div")]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead_room_detail" }, [
+      _c("th", { staticClass: "tb_Room" }, [_vm._v("Room type")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "tb_Sleep" }, [_vm._v("Sleep")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "tb_Price" }, [_vm._v("Price for 2 night")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "tb_choice" }, [_vm._v("Your choice")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "tb_empty_sleect" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "td_tb_Sleep" }, [
+      _c("i", { staticClass: "fa fa-users" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "cover-result-search crs-modal" }, [
+      _c("div", { staticClass: "pc-modal" }, [
+        _c("img", {
+          staticClass: "img-detail-res-model",
+          attrs: { src: "imgs/room1.jpg", alt: "" }
+        })
       ])
     ])
   },
@@ -41336,51 +41780,49 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "rsb-modal-desc" }, [
-      _c("div", { staticClass: "cover-result-search crs-modal" }, [
-        _c("div", { staticClass: "ltx txt-descrip" }, [
-          _c("span", { staticClass: "txt-detail-der" }),
-          _vm._v(
-            "\n                          ຢູ່ຫ່າງຈາກແມ່ນ້ໍາຂອງແມ່ນ້ໍາຂອງ, Vansana Riverside Hotel ມີສະຖານທີ່ທີ່ສະດວກສະບາຍທີ່ມີລະບຽງສ່ວນຕົວແລະຫ້ອງນ້ໍາສ່ວນຕົວ. ມີສະລອຍນ້ໍາກາງແຈ້ງແລະໄນຄັບ ມີບໍລິການ Wi-Fi ຟລີທົ່ວໂຮງແຮມ.\n                          Vansana Riverside Hotel ແມ່ນພຽງແຕ່ 5 ນາທີຈາກນະຄອນວຽງຈັນແລະຕະຫຼາດກາງຄືນ. ມັນເປັນເວລາຂັບລົດ 10 ນາທີຈາກສະຫນາມບິນນານາຊາດ Wattay ແລະຂັບລົດ 20 ນາທີຈາກ Patuxai Arch.\n                          ພ້ອມດ້ວຍພື້ນໄມ້, ຫ້ອງພັກທີ່ສະດວກສະບາຍໃນໂຮງແຮມມີເຄື່ອງປັບອາກາດ, ເຄເບີນແລະຫ້ອງນັ່ງຫຼິ້ນ. ສິ່ງອໍານວຍຄວາມສະດວກໃນຫ້ອງນ້ໍາແລະຫ້ອງນ້ໍາໃນຫ້ອງນ້ໍາສ່ວນຕົວ\n                          ເພື່ອຄວາມສະດວກສະບາຍ, ໂຮງແຮມໃຫ້ບໍລິການແຜນກະຕ້ອນຮັບ 24 ຊົ່ວໂມງ, ສູນທຸລະກິດແລະຫ້ອງປະຊຸມ. ພະນັກງານຢູ່ທີ່ໂຕ໊ະທົວສາມາດຊ່ວຍໃຫ້ຜູ້ເຂົ້າພັກມີການຈັດການທ່ອງທ່ຽວ.\n                          ຮ້ານອາຫານ Vansana ໃຫ້ບໍລິການເມນູທີ່ມີຂະຫນາດກວ້າງຂວາງຂອງຮ້ານອາຫານໄທແລະລາວ.\n              "
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "include-text" }, [
-          _c("ul", { staticClass: "ul-include-txt" }, [
-            _c("li", [
-              _c("i", { staticClass: "fa fa-swimmer" }),
-              _vm._v(" Swimming pool ")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-wifi" }),
-              _vm._v(" Free WiFi ")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-swimming-pool" }),
-              _vm._v(" Outdoor pool")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-parking" }),
-              _vm._v(" Free parking")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-utensils" }),
-              _vm._v(" Restaurant")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-glass-cheers" }),
-              _vm._v(" Bar")
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("i", { staticClass: "fa fa-coffee" }),
-              _vm._v(" Breakfast")
-            ])
+    return _c("div", { staticClass: "cover-result-search crs-modal" }, [
+      _c("div", { staticClass: "ltx txt-descrip" }, [
+        _c("span", { staticClass: "txt-detail-der" }),
+        _vm._v(
+          "\n                          ຢູ່ຫ່າງຈາກແມ່ນ້ໍາຂອງແມ່ນ້ໍາຂອງ, Vansana Riverside Hotel ມີສະຖານທີ່ທີ່ສະດວກສະບາຍທີ່ມີລະບຽງສ່ວນຕົວແລະຫ້ອງນ້ໍາສ່ວນຕົວ. ມີສະລອຍນ້ໍາກາງແຈ້ງແລະໄນຄັບ ມີບໍລິການ Wi-Fi ຟລີທົ່ວໂຮງແຮມ.\n                          Vansana Riverside Hotel ແມ່ນພຽງແຕ່ 5 ນາທີຈາກນະຄອນວຽງຈັນແລະຕະຫຼາດກາງຄືນ. ມັນເປັນເວລາຂັບລົດ 10 ນາທີຈາກສະຫນາມບິນນານາຊາດ Wattay ແລະຂັບລົດ 20 ນາທີຈາກ Patuxai Arch.\n                          ພ້ອມດ້ວຍພື້ນໄມ້, ຫ້ອງພັກທີ່ສະດວກສະບາຍໃນໂຮງແຮມມີເຄື່ອງປັບອາກາດ, ເຄເບີນແລະຫ້ອງນັ່ງຫຼິ້ນ. ສິ່ງອໍານວຍຄວາມສະດວກໃນຫ້ອງນ້ໍາແລະຫ້ອງນ້ໍາໃນຫ້ອງນ້ໍາສ່ວນຕົວ\n                          ເພື່ອຄວາມສະດວກສະບາຍ, ໂຮງແຮມໃຫ້ບໍລິການແຜນກະຕ້ອນຮັບ 24 ຊົ່ວໂມງ, ສູນທຸລະກິດແລະຫ້ອງປະຊຸມ. ພະນັກງານຢູ່ທີ່ໂຕ໊ະທົວສາມາດຊ່ວຍໃຫ້ຜູ້ເຂົ້າພັກມີການຈັດການທ່ອງທ່ຽວ.\n                          ຮ້ານອາຫານ Vansana ໃຫ້ບໍລິການເມນູທີ່ມີຂະຫນາດກວ້າງຂວາງຂອງຮ້ານອາຫານໄທແລະລາວ.\n              "
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "include-text" }, [
+        _c("ul", { staticClass: "ul-include-txt" }, [
+          _c("li", [
+            _c("i", { staticClass: "fa fa-swimmer" }),
+            _vm._v(" Swimming pool ")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "fa fa-wifi" }),
+            _vm._v(" Free WiFi ")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "fa fa-swimming-pool" }),
+            _vm._v(" Outdoor pool")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "fa fa-parking" }),
+            _vm._v(" Free parking")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "fa fa-utensils" }),
+            _vm._v(" Restaurant")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "fa fa-glass-cheers" }),
+            _vm._v(" Bar")
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("i", { staticClass: "fa fa-coffee" }),
+            _vm._v(" Breakfast")
           ])
         ])
       ])
@@ -59032,8 +59474,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/vansana/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/vansana/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\hotelbooking\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\hotelbooking\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

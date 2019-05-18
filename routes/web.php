@@ -18,4 +18,4 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 Route::get('/searchdata','HomeController@search');
-Route::get('/{any}', 'HomeController@index')->where('any', '.*');
+Route::get('/{any}', '  @index')->where('any', '.*');

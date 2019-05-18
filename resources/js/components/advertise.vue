@@ -190,9 +190,10 @@
 
 
 <!-- MODAL ROOM -->
-<div class="cover-modal-rooms" v-show="seemore == true">
+<div class="cover-modal-rooms cover-height" v-show="seemore == true">
 <div class="lds-ring" id="search-loader-modal" v-if="loadermodal !== false" ><div></div><div></div><div></div><div></div></div>
 <div class="close-modal-rooms" v-if="loadermodal==false"><button class="btn-clsoe-exit" @click="seemore = false"><i class="fa fa-times-circle"></i></button></div>
+<div class="close-modal-rooms" v-if="loadermodal==false"><button class="btn-clsoe-back" @click="seemore = false">Go Back</button></div>
 
 <div class="cover-search-box modal-result" v-if="searchclicked==true && loadermodal==false">
       <div class="lds-ring" id="search-loader" v-if="loader !== false"><div></div><div></div><div></div><div></div></div>
@@ -215,6 +216,11 @@
             <li><span class="ltx">ຫ້ອງ</span> - {{ roomsvalue }}</li>
           </ul>
         </div>
+
+
+        
+
+
         <div class="right-search-box">
           <div class="cover-result-search">
             <div class="pic-result">
@@ -228,7 +234,7 @@
                   <li><a href="" class="pomotion ltx">
 1 ຄົນອື່ນເບິ່ງຫາວັນທີຂອງທ່ານໃນ 10 ນາທີສຸດທ້າຍ</a></li>
                   <li><a href="" class="roomdt">Standard Twin Room  </a></li>
-                  <li><a href="" class="btnton ltx">ຈອງຕອນນີ້  </a></li>
+                  <li><a href="#" class="btnton ltx" @click="registerroom">ຈອງຕອນນີ້  </a></li>
                 </ul>
               </div>
               <div class="right-detail-txt">
@@ -245,9 +251,78 @@
             </div>
           </div>
         </div>
+        <!-- register form -->
+        <div class="cv_loader"  v-if="loader_md_register == true">
+           <div class="lds-ring" id="search-loader-register" ><div></div><div></div><div></div><div></div></div>
+        </div>
+       
+        <div class="rsb-modal-register" v-if="loader_md_register == false ">
+          
+          <div class="cover-result-search crs-modal" >
+            <div class="pc-modal-register">
+              <div class="top_check_b">
+                
+                <button class="back_to_page ltx" @click="register_modal = false">ກັບຄືນ</button>
+                 <label for="why_you_guest" class="lb_why_you_guest ltx">ທ່ານກໍາລັງເດີນທາງໄປເຮັດວຽກຢູ່ບໍ?</label><br>
+              <input type="radio" class="why_you_guest" id="why_you_guest" name="work_or_not" v-model="work_or_not" >
+              <input type="radio" class="why_you_guest" id="why_you_guest" name="work_or_not" v-model="work_or_not" >
+              </div>
+             <div class="bottom_input">
+              <label for="title_guest" class="lb_title_guest ltx">ເພດ</label>
+              <select type="text" class="title_guest" id="title_guest" v-model="value_title">
+                <option  class="option_guest" v-for="data in title_m" :value="data">{{ data }}</option>
+              </select>
+              <label for="name_guest" class="lb_name_guest ltx">ຊື່</label>
+              <input type="text" class="name_guest" id="name_guest">
+              <label for="lastname_guest" class="lb_lastname_guest ltx">ນາມສະກຸນ</label>
+              <input type="text" class="lastname_guest" id="lastname_guest"><br>
+              <label for="email_guest" class="lb_email_guest ltx">ອີເມລ</label>
+              <input type="text" class="email_guest" id="email_guest">
+              <label for="cf_email_guest" class="lb_cf_email_guest ltx">ຄອນເຟີມ ອີເມລ</label>
+              <input type="text" class="cf_email_guest" id="cf_email_guest">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register form -->
 
 
-        <div class="rsb-modal">
+ <div class="rsb-modal" >
+          <div class="cover-result-search crs-modal" >
+            <!-- <div class="pc-modal"> -->
+              <table class="tb_room_detail">
+                <thead class="thead_room_detail">
+                  <th class="tb_Room">Room type</th>
+                  <th class="tb_Sleep">Sleep</th>
+                  <th class="tb_Price">Price for 2 night</th>
+                  <th class="tb_choice">Your choice</th>
+                  <th class="tb_empty_sleect"></th>
+                </thead>
+                <tbody class="tbody_room_detail">
+                    <tr>
+                      <td class="td_tb_Room">2 twin beds  ຶ
+Balcony, City view  Air conditioning  Private bathroom  Free WiFi
+• Balcony  • TV  • Telephone  • Cable channels  • Safe  • Sitting area  • Wardrobe or closet  • Shower  • Free toiletries  • Toilet  • Minibar  • Refrigerator  • Electric kettle
+Prices are per room for 3 nights
+Included: 10 % TAX, 10 % Property service charge, Breakfast</td>
+<td class="td_tb_Sleep"><i class="fa fa-users"></i></td>
+                    <td class="td_tb_Price">1,800,000</td>
+                    <td class="td_tb_choice">Breakfast included in the price
+                            Non-refundable
+                            NO PREPAYMENT NEEDED – pay at the property
+                            </td>
+                            <td class="td_tb_empty_sleect">
+                              <button class="ltx btn-confirm-der"  @click="registerroom">ຈອງຕອນນີ້</button>
+                            </td>
+                    </tr>
+                    
+                </tbody>
+              </table>
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <div class="rsb-modal" v-if="register_modal == false">
           <div class="cover-result-search crs-modal" >
             <div class="pc-modal">
               <img src="imgs/room1.jpg" alt="" class="img-detail-res-model">
@@ -255,7 +330,7 @@
           </div>
         </div>
 
-        <div class="rsb-modal-desc">
+        <div class="rsb-modal-desc" v-if="register_modal == false">
           <div class="cover-result-search crs-modal" >
             <!-- <div class="pc-modal"> -->
               <div class="ltx txt-descrip">
@@ -311,6 +386,14 @@ import { setTimeout, clearInterval } from 'timers';
 export default {
   data() {
     return {
+      register_modal:false,
+      work_or_not:'yes',
+      value_title:"",
+      loader_md_register:null,
+      title_m:[
+        'Mr.',
+        'Mrs.'
+      ],
       seemore:null,
       gotbranch:"",
       loadermodal:null,
@@ -375,13 +458,20 @@ export default {
   mounted(vm = this) {
   },
   methods: {
+    registerroom(){
+      this.loader_md_register = true
+      this.register_modal = true
+      setTimeout(() => {
+          this.loader_md_register = false
+      }, 1000);
+    },
     seemorebtn(){
-      $('.cover-modal-rooms').slideUp(1000);
       this.seemore = true
       this.loadermodal = true
       setTimeout(() => {
+        $('.cover-modal-rooms').removeClass('cover-height');
         this.loadermodal = false
-      }, 2000);
+      }, 1000);
     },
     goBack () {
       window.history.length > 1
@@ -405,7 +495,7 @@ export default {
       this.loader=true 
       setTimeout(() => {
           this.loader=false 
-      }, 2000);
+      }, 1000);
       let n = 0
       console.log(this.data_seach.adult)
       search = 
@@ -487,6 +577,161 @@ export default {
 };
 </script>
 <style scoped>
+.cv_loader{
+      position: relative;
+    width: 778px;
+    float: right;
+    top: 7px;
+}
+#search-loader-register{
+
+}
+.bottom_input{
+    text-align: left;
+    padding-top: 44px;
+}
+.pc-modal-register{
+      width: 750px;
+    /* background: #666; */
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.top_check_b{
+    text-align: left;
+}
+.lb_why_you_guest{
+
+}
+.why_you_guest{
+margin-left: 11px;
+
+}
+.lb_title_guest{
+
+}
+.back_to_page{
+
+}
+
+.title_guest{
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.lb_name_guest{
+    padding-left: 20px;
+}
+.name_guest{
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+        margin-left: 7px;
+}
+.lb_lastname_guest{
+  margin-left: 7px;
+}
+.lastname_guest{
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.email_guest{
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.cf_email_guest{
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.lb_email_guest{
+padding-left: 20px;
+}
+.lb_cf_email_guest{
+
+}
+.rsb-modal-register{
+margin-top: 7px;
+    width: 780px;
+    height: 365px;
+    position: relative;
+    border-radius: 3px;
+    background: #fff;
+    float: right;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 11px #343a4017;
+    border: 1px solid #c1c1c157;
+}
+.btn-confirm-der{
+    border: none;
+    background: #1ad850;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+}
+.tb_Room{
+    width: 200px;
+}
+.tb_Sleep{
+width: 100px;
+}
+.tb_Price{
+    width: 200px;
+}
+.tb_choice{
+    width: 170px;
+}
+.tb_empty_sleect{
+text-align: right;
+}
+.td_tb_Room{
+text-align: left;
+    padding-top: 15px;
+}
+.td_tb_Sleep{
+
+}
+.td_tb_Price{
+
+}
+.td_tb_choice{
+text-align: left;
+}
+.td_tb_empty_sleect{
+
+}
+.tb_room_detail{
+    width: 750px;
+    margin: 0 auto;
+        margin-top: 12px;
+}
+.thead_room_detail{
+
+}
+.thead_room_detail th{
+      padding: 9px;
+    background: #338de6;
+    color: #fff;
+}
+.tbody_room_detail{
+
+}
+.tbody_room_detail tr{
+
+}
+.tbody_room_detail tr td{
+
+}
+.btn-clsoe-back{
+      background: none;
+    border: 1px solid #eaeaea;
+    /* border: none; */
+    border-radius: 3px;
+    /* left: 19px; */
+    margin-top: 9px;
+    color: #338de6;
+    height: 26px;
+    width: 72px;
+    /* padding: 3px; */
+    margin-left: 10px;
+}
 .txt-descrip{
    width: 470px;
     float: left;
@@ -536,7 +781,7 @@ margin-top: 7px;
 .rsb-modal{
 margin-top: 7px;
     width: 780px;
-    height: 500px;
+    height: 365px;
     position: relative;
     border-radius: 3px;
     background: #fff;
@@ -567,43 +812,51 @@ margin-top: 7px;
 
 }
 .ul-header-modal{
-width: 778px;
-float: right;
+    width: 778px;
+    float: right;
+    background: #fff;
+    border: 1px solid #eaeaea;
 }
 .ul-header-modal li{
-  float: left;
+      float: left;
     line-height: 50px;
     cursor: pointer;
     width: 194px;
     border: none;
-    background: #1e4250;
-    color: #fff;
-    border-right: 0.01em solid #ffffffed;
+    background: #ffffff;
+    color: #000;
+    border-right: 0.01em solid #f1f1f1;
 }
 #search-loader-modal{
   position: absolute;
     top: 400px;
 }
+.cover-height{
+  height: 1440px;
+}
 .cover-modal-rooms{
   text-align: center;
+  padding-bottom: 175px;
 position: absolute;
     z-index: 100;
+    
     background: #ffffff;
     width: 100%;
     top: 0;
     height: 0 auto;
 }
 .btn-clsoe-exit{
-        border: 0;
-    top: 19px;
+          border: 0;
+    top: -2px;
     color: #f95555;
     font-size: 34px;
     position: fixed;
-    right: 47px;
+    right: 9px;
+    background: none;
 }
 .close-modal-rooms{
-    position: absolute;
-    right: 0;
+    position: fixed;
+    left: 0;
 }
 .lireview{
 
@@ -768,12 +1021,12 @@ width: 260px;
     text-align: center;
     height: 300px;
     border-radius: 3px;
-    /* border: 1px solid #338de6; */
+    border: 1px solid #eaeaea;
     position: relative;
-    /* background: #f8fafc; */
+    background: #ffffff;
 }
 .right-search-box{
-      margin-top: 7px;
+      /* margin-top: 7px; */
 
     width: 780px;
     height: 300px;
